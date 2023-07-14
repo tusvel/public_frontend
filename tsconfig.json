@@ -14,6 +14,8 @@
     "allowJs": true,
     // Определяет то, какие импорты будут
     "moduleResolution": "node",
+    // Относительный путь
+    "baseUrl": ".",
     // Добовляет поддержку дефолтных импортов.
     "allowSyntheticDefaultImports": true,
     // Позволяет рабтать с пакетами, которые используют common.js
