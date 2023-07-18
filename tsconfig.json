@@ -16,6 +16,9 @@
     "moduleResolution": "node",
     // Относительный путь
     "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
     // Добовляет поддержку дефолтных импортов.
     "allowSyntheticDefaultImports": true,
     // Позволяет рабтать с пакетами, которые используют common.js
