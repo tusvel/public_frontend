@@ -1,7 +1,7 @@
 import {createContext} from "react";
 
 export enum Theme {
-	LITE = 'lite',
+	LIGHT = 'light',
 	DARK = 'dark',
 }
 
