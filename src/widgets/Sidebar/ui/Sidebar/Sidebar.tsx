@@ -1,24 +1,24 @@
-import React, {FC, useState} from 'react';
-import {classNames} from "shared/lib/classNames/classNames";
-import cls from './Sidebar.module.scss'
-import {Button} from "shared/ui/Button/Button";
-import {ThemeSwitcher} from "widgets/ThemeSwitcher";
-import {LangSwitcher} from "widgets/LangSwitcher";
+import React, {type FC, useState} from 'react';
+import {classNames} from 'shared/lib/classNames/classNames';
+import cls from './Sidebar.module.scss';
+import {Button} from 'shared/ui/Button/Button';
+import {ThemeSwitcher} from 'widgets/ThemeSwitcher';
+import {LangSwitcher} from 'widgets/LangSwitcher';
 
-interface SidebarProps {
+type SidebarProps = {
 	className?: string;
-}
+};
 
-export const Sidebar: FC<SidebarProps> = (props) => {
+export const Sidebar: FC<SidebarProps> = props => {
 	const {
 		className,
-	} = props
+	} = props;
 
 	const [collapsed, setCollapsed] = useState(false);
 
 	const toggleCollapsed = () => {
 		setCollapsed(prev => !prev);
-	}
+	};
 
 	return (
 		<div
@@ -32,5 +32,5 @@ export const Sidebar: FC<SidebarProps> = (props) => {
 				<LangSwitcher/>
 			</div>
 		</div>
-	)
+	);
 };

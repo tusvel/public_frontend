@@ -1,16 +1,16 @@
-import React, {FC} from 'react';
-import {classNames} from "shared/lib/classNames/classNames";
-import cls from './Navbar.module.scss'
-import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
+import React, {type FC} from 'react';
+import {classNames} from 'shared/lib/classNames/classNames';
+import cls from './Navbar.module.scss';
+import {AppLink, AppLinkTheme} from 'shared/ui/AppLink/AppLink';
 
-interface NavbarProps {
+type NavbarProps = {
 	className?: string;
-}
+};
 
-export const Navbar: FC<NavbarProps> = (props) => {
+export const Navbar: FC<NavbarProps> = props => {
 	const {
-		className
-	} = props
+		className,
+	} = props;
 
 	return (
 		<div
@@ -21,5 +21,5 @@ export const Navbar: FC<NavbarProps> = (props) => {
 				<AppLink theme={AppLinkTheme.INVERTED_PRIMARY} to={'/about'}>About</AppLink>
 			</div>
 		</div>
-	)
+	);
 };
