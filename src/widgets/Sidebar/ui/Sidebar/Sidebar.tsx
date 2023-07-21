@@ -1,8 +1,9 @@
-import React, {FC, PropsWithChildren, useState} from 'react';
+import React, {FC, useState} from 'react';
 import {classNames} from "shared/lib/classNames/classNames";
 import cls from './Sidebar.module.scss'
 import {Button} from "shared/ui/Button/Button";
 import {ThemeSwitcher} from "widgets/ThemeSwitcher";
+import {LangSwitcher} from "widgets/LangSwitcher";
 
 interface SidebarProps {
 	className?: string;
@@ -28,7 +29,7 @@ export const Sidebar: FC<SidebarProps> = (props) => {
 			</Button>
 			<div className={cls.switchers}>
 				<ThemeSwitcher />
-		{/* <LangSwitcher /> */}
+				<LangSwitcher/>
 			</div>
 		</div>
 	)
