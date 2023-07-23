@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1690123440396" clover="3.2.0">
+  <project timestamp="1690123440396" name="All files">
+    <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3" elements="8" coveredelements="8" complexity="0" loc="3" ncloc="3" packages="1" files="1" classes="1"/>
+    <file name="classNames.ts" path="/Users/tusvel/WebstormProjects/public_frontend/src/shared/lib/classNames/classNames.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <line num="4" count="5" type="stmt"/>
+      <line num="8" count="6" type="stmt"/>
+      <line num="9" count="4" type="stmt"/>
+    </file>
+  </project>
+</coverage>

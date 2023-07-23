@@ -19,8 +19,12 @@ export const Navbar: FC<NavbarProps> = props => {
 			className={classNames(cls.Navbar, {}, [className])}
 		>
 			<div className={cls.links}>
-				<AppLink theme={AppLinkTheme.INVERTED_PRIMARY} className={cls.mainLink} to={'/'}>{t('Главная страница')}</AppLink>
-				<AppLink theme={AppLinkTheme.INVERTED_PRIMARY} to={'/about'}>{t('О сайте')}</AppLink>
+				<AppLink theme={AppLinkTheme.INVERTED_PRIMARY} className={cls.mainLink} to={'/'}>
+					{t('Главная страница')}
+				</AppLink>
+				<AppLink theme={AppLinkTheme.INVERTED_PRIMARY} to={'/about'}>
+					{t('О сайте')}
+				</AppLink>
 			</div>
 		</div>
 	);

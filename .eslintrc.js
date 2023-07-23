@@ -2,6 +2,7 @@ module.exports = {
 	env: {
 		browser: true,
 		es2021: true,
+		jest: true,
 	},
 	extends: [
 		'xo',
@@ -30,8 +31,9 @@ module.exports = {
 				'*.tsx',
 			],
 			rules: {
-				'@typescript-eslint/naming-convention': 'warn',
+				'@typescript-eslint/naming-convention': 'off',
 				'@typescript-eslint/prefer-nullish-coalescing': 'off',
+				'@typescript-eslint/no-unsafe-call': 'off',
 			},
 		},
 	],
@@ -51,5 +53,6 @@ module.exports = {
 	rules: {
 		'react/react-in-jsx-scope': 'off',
 		'i18next/no-literal-string': 2,
+		'max-len': ['error', {code: 100, ignoreComments: true}],
 	},
 };
