@@ -6,9 +6,9 @@ import './shared/config/i18n/i18n';
 
 const root = createRoot(document.getElementById('app'));
 root.render(
-	<BrowserRouter>
-		<ThemeProvider>
-			<App />
-		</ThemeProvider>
-	</BrowserRouter>,
+  <BrowserRouter>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </BrowserRouter>,
 );

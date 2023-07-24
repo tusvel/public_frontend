@@ -34,6 +34,8 @@ module.exports = {
 				'@typescript-eslint/naming-convention': 'off',
 				'@typescript-eslint/prefer-nullish-coalescing': 'off',
 				'@typescript-eslint/no-unsafe-call': 'off',
+				'@typescript-eslint/indent': 'off',
+				indent: ['error', 2],
 			},
 		},
 	],

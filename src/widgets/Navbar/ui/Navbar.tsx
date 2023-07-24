@@ -9,23 +9,23 @@ type NavbarProps = {
 };
 
 export const Navbar: FC<NavbarProps> = props => {
-	const {
-		className,
-	} = props;
-	const {t} = useTranslation();
+  const {
+    className,
+  } = props;
+  const {t} = useTranslation();
 
-	return (
-		<div
-			className={classNames(cls.Navbar, {}, [className])}
-		>
-			<div className={cls.links}>
-				<AppLink theme={AppLinkTheme.INVERTED_PRIMARY} className={cls.mainLink} to={'/'}>
-					{t('Главная страница')}
-				</AppLink>
-				<AppLink theme={AppLinkTheme.INVERTED_PRIMARY} to={'/about'}>
-					{t('О сайте')}
-				</AppLink>
-			</div>
-		</div>
-	);
+  return (
+    <div
+      className={classNames(cls.Navbar, {}, [className])}
+    >
+      <div className={cls.links}>
+        <AppLink theme={AppLinkTheme.INVERTED_PRIMARY} className={cls.mainLink} to={'/'}>
+          {t('Главная страница')}
+        </AppLink>
+        <AppLink theme={AppLinkTheme.INVERTED_PRIMARY} to={'/about'}>
+          {t('О сайте')}
+        </AppLink>
+      </div>
+    </div>
+  );
 };

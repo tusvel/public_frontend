@@ -10,27 +10,27 @@ type SidebarProps = {
 };
 
 export const Sidebar: FC<SidebarProps> = props => {
-	const {
-		className,
-	} = props;
+  const {
+    className,
+  } = props;
 
-	const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
 
-	const toggleCollapsed = () => {
-		setCollapsed(prev => !prev);
-	};
+  const toggleCollapsed = () => {
+    setCollapsed(prev => !prev);
+  };
 
-	return (
-		<div
-			className={classNames(cls.Sidebar, {[cls.collapsed]: collapsed}, [className])}
-		>
-			<Button onClick={toggleCollapsed}>
+  return (
+    <div
+      className={classNames(cls.Sidebar, {[cls.collapsed]: collapsed}, [className])}
+    >
+      <Button onClick={toggleCollapsed}>
 				TOGGLE
-			</Button>
-			<div className={cls.switchers}>
-				<ThemeSwitcher />
-				<LangSwitcher/>
-			</div>
-		</div>
-	);
+      </Button>
+      <div className={cls.switchers}>
+        <ThemeSwitcher />
+        <LangSwitcher/>
+      </div>
+    </div>
+  );
 };

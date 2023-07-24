@@ -16,21 +16,21 @@ export enum AppLinkTheme {
 }
 
 export const AppLink: FC<AppLinkProps & PropsWithChildren> = props => {
-	const {
-		to,
-		className,
-		children,
-		theme = AppLinkTheme.PRIMARY,
-		...otherProps
-	} = props;
+  const {
+    to,
+    className,
+    children,
+    theme = AppLinkTheme.PRIMARY,
+    ...otherProps
+  } = props;
 
-	return (
-		<Link
-			className={classNames('', {}, [className, cls[theme]])}
-			to={to}
-			{...otherProps}
-		>
-			{children}
-		</Link>
-	);
+  return (
+    <Link
+      className={classNames('', {}, [className, cls[theme]])}
+      to={to}
+      {...otherProps}
+    >
+      {children}
+    </Link>
+  );
 };
