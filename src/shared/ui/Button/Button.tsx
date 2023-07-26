@@ -4,6 +4,7 @@ import cls from './Button.module.scss';
 
 export enum ButtonTheme {
 	CLEAR = 'clear',
+  DEFAULT = 'default',
 }
 
 type ButtonProps = {
@@ -15,7 +16,7 @@ export const Button: FC<ButtonProps & PropsWithChildren> = props => {
   const {
     className,
     children,
-    theme = ButtonTheme.CLEAR,
+    theme = ButtonTheme.DEFAULT,
     ...otherProps
   } = props;
 
