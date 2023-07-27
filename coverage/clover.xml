@@ -1,12 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1690123440396" clover="3.2.0">
-  <project timestamp="1690123440396" name="All files">
-    <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3" elements="8" coveredelements="8" complexity="0" loc="3" ncloc="3" packages="1" files="1" classes="1"/>
-    <file name="classNames.ts" path="/Users/tusvel/WebstormProjects/public_frontend/src/shared/lib/classNames/classNames.ts">
+<coverage generated="1690476476350" clover="3.2.0">
+  <project timestamp="1690476476350" name="All files">
+    <metrics statements="43" coveredstatements="33" conditionals="11" coveredconditionals="6" methods="20" coveredmethods="13" elements="74" coveredelements="52" complexity="0" loc="43" ncloc="43" packages="14" files="15" classes="15"/>
+    <package name="config.jest">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="jestEmptyComponent.tsx" path="/Users/tusvel/WebstormProjects/public_frontend/config/jest/jestEmptyComponent.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.providers.ThemeProvider">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/tusvel/WebstormProjects/public_frontend/src/app/providers/ThemeProvider/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.app.providers.ThemeProvider.lib">
+      <metrics statements="9" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="ThemeContext.ts" path="/Users/tusvel/WebstormProjects/public_frontend/src/app/providers/ThemeProvider/lib/ThemeContext.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+      <file name="useTheme.ts" path="/Users/tusvel/WebstormProjects/public_frontend/src/app/providers/ThemeProvider/lib/useTheme.ts">
+        <metrics statements="7" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.providers.ThemeProvider.ui">
+      <metrics statements="5" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="0"/>
+      <file name="ThemeProvider.tsx" path="/Users/tusvel/WebstormProjects/public_frontend/src/app/providers/ThemeProvider/ui/ThemeProvider.tsx">
+        <metrics statements="5" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="0"/>
+        <line num="8" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.config.i18n">
+      <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="i18nForTest.ts" path="/Users/tusvel/WebstormProjects/public_frontend/src/shared/config/i18n/i18nForTest.ts">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.lib.classNames">
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-      <line num="4" count="5" type="stmt"/>
-      <line num="8" count="6" type="stmt"/>
-      <line num="9" count="4" type="stmt"/>
-    </file>
+      <file name="classNames.ts" path="/Users/tusvel/WebstormProjects/public_frontend/src/shared/lib/classNames/classNames.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="8" count="22" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.lib.renderWithTranslation">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="renderWithTranslation.tsx" path="/Users/tusvel/WebstormProjects/public_frontend/src/shared/lib/renderWithTranslation/renderWithTranslation.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.ui.Button">
+      <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="Button.tsx" path="/Users/tusvel/WebstormProjects/public_frontend/src/shared/ui/Button/Button.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="21" count="11" type="stmt"/>
+        <line num="23" count="11" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.widgets.LangSwitcher">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/tusvel/WebstormProjects/public_frontend/src/widgets/LangSwitcher/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.widgets.LangSwitcher.ui">
+      <metrics statements="8" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="1"/>
+      <file name="LangSwitcher.tsx" path="/Users/tusvel/WebstormProjects/public_frontend/src/widgets/LangSwitcher/ui/LangSwitcher.tsx">
+        <metrics statements="8" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.widgets.Sidebar">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/tusvel/WebstormProjects/public_frontend/src/widgets/Sidebar/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.widgets.Sidebar.ui.Sidebar">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="Sidebar.tsx" path="/Users/tusvel/WebstormProjects/public_frontend/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.widgets.ThemeSwitcher">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/tusvel/WebstormProjects/public_frontend/src/widgets/ThemeSwitcher/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.widgets.ThemeSwitcher.ui">
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="ThemeSwitcher.tsx" path="/Users/tusvel/WebstormProjects/public_frontend/src/widgets/ThemeSwitcher/ui/ThemeSwitcher.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
