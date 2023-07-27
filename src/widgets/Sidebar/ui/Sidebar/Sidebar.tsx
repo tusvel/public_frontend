@@ -33,7 +33,7 @@ export const Sidebar: FC<SidebarProps> = props => {
       </Button>
       <div className={cls.switchers}>
         <ThemeSwitcher />
-        <LangSwitcher/>
+        <LangSwitcher className={cls.LangSwitcher}/>
       </div>
     </div>
   );

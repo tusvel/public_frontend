@@ -22,12 +22,18 @@
     // Добовляет поддержку дефолтных импортов.
     "allowSyntheticDefaultImports": true,
     // Позволяет рабтать с пакетами, которые используют common.js
-    "esModuleInterop": true,
+    "esModuleInterop": true
   },
   "ts-node": {
     "compilerOptions": {
       // Указываем модульнрую систему компиляции для ts-node.
-      "module": "CommonJS",
+      "module": "CommonJS"
     }
-  }
+  },
+  "include": [
+    "./config/**/*.ts",
+    "./config/**/*.tsx",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ]
 }
