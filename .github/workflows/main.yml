@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-verstion: [ 18.12.1 ]
+        node-version: [ 18.12.1 ]
     steps:
       - uses: actions/checkout@v2
-      - name: Staring Node.js ${{ matrix.node-verstion }}
+      - name: Starting Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-verstion: ${{ matrix.node-verstion }}
+          node-version: ${{ matrix.node-version }}
       - name: install modules
         run: npm install
       - name: build production project
