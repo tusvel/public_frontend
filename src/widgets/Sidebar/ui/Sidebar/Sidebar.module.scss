@@ -1,26 +1,37 @@
 .Sidebar {
-	height: calc(100vh - var(--navbar-height));
-	width: 300px;
-	background: var(--inverted-bg-color);
-	position: relative;
-	transition: width 0.3s;
-}
-
-.collapsed {
-	width: 80px;
+  height: calc(100vh - var(--navbar-height));
+  width: 300px;
+  background: var(--inverted-bg-color);
+  position: relative;
+  transition: width 0.3s;
 }
 
 .switchers {
-	background: var(--bg-color);
-	border-right: var(--inverted-bg-color) 1px solid;
-	position: absolute;
-	height: 60px;
-	bottom: 0;
-	display: flex;
-	justify-content: center;
-	width: 100%;
+  background: var(--bg-color);
+  border-right: var(--inverted-bg-color) 1px solid;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .LangSwitcher {
-	margin-left: 15px;
+  margin-left: 15px;
+}
+
+.sidebarToggle {
+  position: absolute;
+  bottom: 24px;
+  right: -24px;
+}
+
+.collapsed {
+  width: 80px;
+
+  .switchers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

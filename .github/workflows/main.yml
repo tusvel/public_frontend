@@ -2,15 +2,15 @@ name: Main CI
 run-name: ${{ github.actor }} is testing.
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 jobs:
   testing:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 18.12.1 ]
+        node-version: [18.12.1]
     steps:
       - uses: actions/checkout@v2
       - name: Starting Node.js ${{ matrix.node-version }}

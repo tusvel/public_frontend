@@ -1,10 +1,10 @@
 import type webpack from 'webpack';
-import {type BuildPaths} from '../build/types/config';
+import { type BuildPaths } from '../build/types/config';
 import path from 'path';
-import {buildCssLoader} from '../build/loaders/buildCssLoader';
-import {buildSvgLoader} from '../build/loaders/buildSvgLoader';
+import { buildCssLoader } from '../build/loaders/buildCssLoader';
+import { buildSvgLoader } from '../build/loaders/buildSvgLoader';
 
-export default ({config}: {config: webpack.Configuration}) => {
+export default ({ config }: { config: webpack.Configuration }) => {
   const paths: BuildPaths = {
     entry: '',
     build: '',
@@ -17,7 +17,7 @@ export default ({config}: {config: webpack.Configuration}) => {
   config.module.rules = config.module.rules.map((rule: webpack.RuleSetRule) => {
     // eslint-disable-next-line
     if (/svg/.test(rule.test as string)) {
-      return {...rule, exclude: /\.svg$/i};
+      return { ...rule, exclude: /\.svg$/i };
     }
 
     return rule;
