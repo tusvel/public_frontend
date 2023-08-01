@@ -1,6 +1,6 @@
 .Sidebar {
   height: calc(100vh - var(--navbar-height));
-  width: 300px;
+  width: 200px;
   background: var(--inverted-bg-color);
   position: relative;
   transition: width 0.3s;
@@ -16,8 +16,13 @@
   width: 100%;
 }
 
-.LangSwitcher {
+.langSwitcher {
   margin-left: 15px;
+}
+
+.link {
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .sidebarToggle {
@@ -26,12 +31,41 @@
   right: -24px;
 }
 
+.items {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  align-items: start;
+}
+
+.item {
+  margin-bottom: 15px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  fill: var(--inverted-primary-color);
+}
+
+// styles in collapsed sidebar
 .collapsed {
-  width: 80px;
+  width: 60px;
 
   .switchers {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .langSwitcher {
+    margin-left: 0;
+  }
+
+  .link {
+    font-size: 0;
   }
 }
