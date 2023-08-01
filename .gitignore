@@ -4,3 +4,4 @@
 .loki/report.html
 .loki/report.json
 /storybook-static
+/coverage
