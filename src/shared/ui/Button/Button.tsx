@@ -1,30 +1,7 @@
-import {
-  type ButtonHTMLAttributes,
-  type FC,
-  type PropsWithChildren,
-} from 'react';
+import { type FC, type PropsWithChildren } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
-
-export enum ButtonTheme {
-  CLEAR = 'clear',
-  OUTLINE = 'outline',
-  BACKGROUND = 'background',
-  BACKGROUND_INVERTED = 'background_inverted',
-}
-
-type ButtonProps = {
-  className?: string;
-  theme?: ButtonTheme;
-  size?: ButtonSize;
-  square?: boolean;
-} & ButtonHTMLAttributes<HTMLButtonElement>;
-
-export enum ButtonSize {
-  M = 'size_m',
-  L = 'size_l',
-  XL = 'size_xl',
-}
+import { type ButtonProps, ButtonSize } from './Button.interface';
 
 export const Button: FC<ButtonProps & PropsWithChildren> = (props) => {
   const {

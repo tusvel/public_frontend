@@ -31,6 +31,7 @@ module.exports = {
         '@typescript-eslint/no-unsafe-call': 'off',
         '@typescript-eslint/indent': 'off',
         '@typescript-eslint/object-curly-spacing': 'off',
+        '@typescript-eslint/no-unnecessary-type-arguments': 'off',
       },
     },
     {
@@ -44,7 +45,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'i18next'],
+  plugins: ['react', 'i18next', 'react-hooks'],
   settings: {
     react: {
       version: '18.2.0',
@@ -55,5 +56,7 @@ module.exports = {
     'i18next/no-literal-string': 2,
     'react/display-name': 'off',
     'new-cap': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
 };

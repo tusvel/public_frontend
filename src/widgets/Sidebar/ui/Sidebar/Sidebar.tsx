@@ -1,14 +1,16 @@
 import React, { type FC, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Sidebar.module.scss';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { Button } from 'shared/ui/Button/Button';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { useTranslation } from 'react-i18next';
 import MainIcon from 'shared/assets/icons/links/main.svg';
 import MoreIcon from 'shared/assets/icons/links/more.svg';
+import { ButtonTheme } from 'shared/ui/Button/Button.interface';
+import { AppLinkTheme } from 'shared/ui/AppLink/AppLink.interface';
 
 type SidebarProps = {
   className?: string;
