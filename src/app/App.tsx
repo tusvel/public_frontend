@@ -13,7 +13,7 @@ const App = () => {
   }, [theme]);
 
   return (
-    <div className={classNames('app', {}, [])}>
+    <div className={classNames('app', {}, [theme])}>
       <Navbar />
       <div className="content-page">
         <Sidebar />
