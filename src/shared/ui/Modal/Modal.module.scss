@@ -7,16 +7,6 @@
   color: var(--primary-color);
 }
 
-.Modal.light {
-  --bg-color: #dcdcdc;
-  --primary-color: #333030;
-}
-
-.Modal.dark {
-  --bg-color: #474a51;
-  --primary-color: #c3cbde;
-}
-
 .overlay {
   display: flex;
   justify-content: center;
