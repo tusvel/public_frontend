@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx webpack serve --env port=3000",
-    "start:dev:server": "json-server --watch ./json-server/index.js --port 8000",
+    "start:dev:server": "node ./json-server/index.js",
     "build:prod": "npx webpack --env mode=production",
     "build:dev": "npx webpack --env mode=development",
     "lint:ts": "eslint '**/*.{ts,tsx}'",

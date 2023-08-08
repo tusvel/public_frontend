@@ -16,10 +16,17 @@ import { useTheme } from 'app/providers/ThemeProvider';
 const ANIMATION_DELAY = 300;
 
 export const Modal: FC<ModalProps & PropsWithChildren> = (props) => {
-  const { className, children, isOpen, onClose } = props;
+  const { className, children, isOpen, onClose, lazy } = props;
   const [isClosing, setIsClosing] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
   const { theme } = useTheme();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsMounted(true);
+    }
+  }, [isOpen]);
 
   const closeHandler = useCallback(() => {
     if (onClose) {
@@ -59,6 +66,10 @@ export const Modal: FC<ModalProps & PropsWithChildren> = (props) => {
       window.removeEventListener('keydown', onKeyDown as () => void);
     };
   }, [isOpen, onKeyDown]);
+
+  if (lazy && !isMounted) {
+    return null;
+  }
 
   return (
     <Portal>
