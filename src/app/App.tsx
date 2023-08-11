@@ -4,13 +4,17 @@ import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { userActions } from 'entities/User';
 
 const App = () => {
   const { theme } = useTheme();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     document.body.className = theme;
-  }, [theme]);
+    dispatch(userActions.initAuthData());
+  }, [theme, dispatch]);
 
   return (
     <div className={classNames('app', {}, [theme])}>

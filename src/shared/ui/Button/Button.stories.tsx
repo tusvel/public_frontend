@@ -103,3 +103,20 @@ export const SquareSizeXL: Story = {
     square: true,
   },
 };
+
+export const Disabled: Story = {
+  args: {
+    children: 'Text',
+    disabled: true,
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+  },
+};
+
+export const DisabledDark: Story = {
+  args: {
+    children: 'Text',
+    disabled: true,
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+  },
+  decorators: [ThemeDecorator(Theme.DARK)],
+};

@@ -7,5 +7,10 @@
   "Произошла ошибка": "Occurred error",
   "Обновить страницу": "Reload page",
   "Короткий язык": "RU",
-  "Войти": "Login"
+  "Войти": "Login",
+  "Форма авторизации": "Authorization form",
+  "Введите логин": "Enter username",
+  "Введите пароль": "Enter password",
+  "Выйти": "Logout",
+  "Вы ввели неверный логин или пароль": "You have entered an incorrect username or password"
 }

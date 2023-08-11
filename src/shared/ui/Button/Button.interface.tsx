@@ -13,6 +13,7 @@ export type ButtonProps = {
   theme?: ButtonTheme;
   size?: ButtonSize;
   square?: boolean;
+  disabled?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export enum ButtonSize {
