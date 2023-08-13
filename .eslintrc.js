@@ -32,6 +32,7 @@ module.exports = {
         '@typescript-eslint/indent': 'off',
         '@typescript-eslint/object-curly-spacing': 'off',
         '@typescript-eslint/no-unnecessary-type-arguments': 'off',
+        '@typescript-eslint/no-dynamic-delete': 'off',
       },
     },
     {
