@@ -20,11 +20,6 @@
   margin-left: 15px;
 }
 
-.link {
-  line-height: 1;
-  white-space: nowrap;
-}
-
 .sidebarToggle {
   position: absolute;
   bottom: 24px;
@@ -36,19 +31,6 @@
   flex-direction: column;
   padding: 10px 20px;
   align-items: start;
-}
-
-.item {
-  margin-bottom: 15px;
-  display: inline-flex;
-  align-items: center;
-}
-
-.icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  fill: var(--inverted-primary-color);
 }
 
 // styles in collapsed sidebar
@@ -63,9 +45,5 @@
 
   .langSwitcher {
     margin-left: 0;
-  }
-
-  .link {
-    font-size: 0;
   }
 }

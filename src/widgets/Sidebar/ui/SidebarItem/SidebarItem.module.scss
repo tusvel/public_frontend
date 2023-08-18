@@ -1,0 +1,23 @@
+.link {
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.item {
+  margin-bottom: 15px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  fill: var(--inverted-primary-color);
+}
+
+.collapsed {
+  .link {
+    font-size: 0;
+  }
+}

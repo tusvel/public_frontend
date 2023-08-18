@@ -18,7 +18,7 @@ export const LoginModal: FC<LoginModalProps> = (props) => {
       className={classNames('', {}, [])}
       lazy
     >
-      <LoginFormAsync />
+      <LoginFormAsync onSuccess={onClose} />
     </Modal>
   );
 };
