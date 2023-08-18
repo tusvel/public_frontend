@@ -6,3 +6,4 @@
 /storybook-static
 /coverage
 /extractedTranslations
+.env
