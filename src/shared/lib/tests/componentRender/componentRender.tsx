@@ -19,10 +19,10 @@ export const componentRender = (
   const { route = '/', initialState } = options;
 
   return render(
-    <StoreProvider initialState={initialState}>
-      <MemoryRouter basename={route}>
+    <MemoryRouter basename={route}>
+      <StoreProvider initialState={initialState}>
         <I18nextProvider i18n={i18nForTest}>{component}</I18nextProvider>
-      </MemoryRouter>
-    </StoreProvider>,
+      </StoreProvider>
+    </MemoryRouter>,
   );
 };

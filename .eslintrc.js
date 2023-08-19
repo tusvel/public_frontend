@@ -33,6 +33,7 @@ module.exports = {
         '@typescript-eslint/object-curly-spacing': 'off',
         '@typescript-eslint/no-unnecessary-type-arguments': 'off',
         '@typescript-eslint/no-dynamic-delete': 'off',
+        'no-warning-comments': 'off',
       },
     },
     {
@@ -59,5 +60,9 @@ module.exports = {
     'new-cap': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
+  },
+  globals: {
+    __IS_DEV__: true,
+    __API__: true,
   },
 };
