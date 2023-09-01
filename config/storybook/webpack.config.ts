@@ -23,6 +23,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
   // Loaders
   config.module!.rules!.push(buildCssLoader(true));
   config.module!.rules = config.module!.rules?.map(
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     (rule: webpack.RuleSetRule) => {
       // eslint-disable-next-line
@@ -34,6 +35,11 @@ export default ({ config }: { config: webpack.Configuration }) => {
     },
   );
   config.module!.rules!.push(buildSvgLoader());
+
+  config.resolve!.alias = {
+    ...config.resolve!.alias,
+    entities: path.resolve(__dirname, '..', '..', 'src', 'entities'),
+  };
 
   // Resolvers
   config.resolve!.modules!.push(paths.src);

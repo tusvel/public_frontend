@@ -2,7 +2,7 @@ import { type ComponentType } from 'react';
 import { StoreProvider } from 'app/providers/StoreProvider';
 import { type StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
-import { profileReducer } from '../../../../entities/Profile';
+import { profileReducer } from 'entities/Profile';
 import { type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 const defaultAsyncReducers: ReducersList = {

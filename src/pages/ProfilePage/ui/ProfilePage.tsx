@@ -7,7 +7,7 @@ import {
   fetchProfileData,
   ProfileCard,
   profileReducer,
-} from '../../../entities/Profile';
+} from 'entities/Profile';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 
 const reducers: ReducersList = {
