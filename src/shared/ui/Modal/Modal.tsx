@@ -1,13 +1,14 @@
 import React, {
   type FC,
   type KeyboardEvent,
+  type MutableRefObject,
   type PropsWithChildren,
   useCallback,
   useEffect,
   useRef,
   useState,
 } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, type Mods } from 'shared/lib/classNames/classNames';
 import cls from './Modal.module.scss';
 import { type ModalProps } from './Modal.interface';
 import { Portal } from 'shared/ui/Portal/Portal';
@@ -18,7 +19,7 @@ const ANIMATION_DELAY = 300;
 export const Modal: FC<ModalProps & PropsWithChildren> = (props) => {
   const { className, children, isOpen, onClose, lazy } = props;
   const [isClosing, setIsClosing] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
   const { theme } = useTheme();
   const [isMounted, setIsMounted] = useState(false);
 
@@ -42,7 +43,7 @@ export const Modal: FC<ModalProps & PropsWithChildren> = (props) => {
     e.stopPropagation();
   }, []);
 
-  const mods = {
+  const mods: Mods = {
     [cls.opened]: isOpen,
     [cls.closing]: isClosing,
   };

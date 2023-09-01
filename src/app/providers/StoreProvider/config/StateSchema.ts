@@ -36,7 +36,7 @@ export type ReducerManager = {
 
 export type ThunkExtraArg = {
   api: AxiosInstance;
-  navigate: NavigateFunction;
+  navigate?: NavigateFunction;
 };
 
 export type ThunkConfig<T> = {

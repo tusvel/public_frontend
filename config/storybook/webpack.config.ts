@@ -13,7 +13,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
   };
 
   // Plugins
-  config.plugins?.push(
+  config.plugins!.push(
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(true),
       __API__: JSON.stringify(''),
@@ -21,19 +21,22 @@ export default ({ config }: { config: webpack.Configuration }) => {
   );
 
   // Loaders
-  config.module.rules.push(buildCssLoader(true));
-  config.module.rules = config.module.rules.map((rule: webpack.RuleSetRule) => {
-    // eslint-disable-next-line
-    if (/svg/.test(rule.test as string)) {
-      return { ...rule, exclude: /\.svg$/i };
-    }
+  config.module!.rules!.push(buildCssLoader(true));
+  config.module!.rules = config.module!.rules?.map(
+    // @ts-expect-error
+    (rule: webpack.RuleSetRule) => {
+      // eslint-disable-next-line
+      if (/svg/.test(rule.test as string)) {
+        return { ...rule, exclude: /\.svg$/i };
+      }
 
-    return rule;
-  });
-  config.module.rules.push(buildSvgLoader());
+      return rule;
+    },
+  );
+  config.module!.rules!.push(buildSvgLoader());
 
   // Resolvers
-  config.resolve.modules.push(paths.src);
+  config.resolve!.modules!.push(paths.src);
 
   return config;
 };

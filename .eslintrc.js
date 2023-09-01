@@ -34,6 +34,9 @@ module.exports = {
         '@typescript-eslint/no-unnecessary-type-arguments': 'off',
         '@typescript-eslint/no-dynamic-delete': 'off',
         'no-warning-comments': 'off',
+        '@typescript-eslint/ban-types': 'off',
+        '@typescript-eslint/ban-ts-comment': 'warn',
+        '@typescript-eslint/prefer-ts-expect-error': 'warn',
       },
     },
     {

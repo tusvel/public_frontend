@@ -23,7 +23,9 @@
     // Добовляет поддержку дефолтных импортов.
     "allowSyntheticDefaultImports": true,
     // Позволяет рабтать с пакетами, которые используют common.js
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    // Строгий рижем
+    "strict": true,
   },
   "ts-node": {
     "compilerOptions": {
