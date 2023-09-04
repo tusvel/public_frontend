@@ -18,6 +18,10 @@ import { useSelector } from 'react-redux';
 import { ProfilePageHeader } from 'pages/ProfilePage/ui/ProfilePageHeader/ProfilePageHeader';
 import { type Currency } from 'entities/Currency';
 import { type Country } from 'entities/Country';
+import { getProfileValidateErrors } from 'entities/Profile/model/selectors/getProfileValidateErrors/getProfileValidateErrors';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { useTranslation } from 'react-i18next';
+import { ValidateProfileError } from 'entities/Profile/model/types/profile';
 
 const reducers: ReducersList = {
   profile: profileReducer,
@@ -28,6 +32,16 @@ const ProfilePage = memo(() => {
   const error = useSelector(getProfileError);
   const isLoading = useSelector(getProfileIsLoading);
   const readonly = useSelector(getProfileReadonly);
+  const validateErrors = useSelector(getProfileValidateErrors);
+  const { t } = useTranslation('profile');
+
+  const validateErrorTranslates = {
+    [ValidateProfileError.SERVER_ERROR]: t('Серверная ошибка при сохранении'),
+    [ValidateProfileError.INCORRECT_COUNTRY]: t('Некорекктный регион'),
+    [ValidateProfileError.NO_DATA]: t('Данные не указаны'),
+    [ValidateProfileError.INCORRECT_USER_DATA]: t('Имя и фамилия обязательны'),
+    [ValidateProfileError.INCORRECT_AGE]: t('Некорректный возраст'),
+  };
 
   useEffect(() => {
     void dispatch(fetchProfileData());
@@ -85,6 +99,14 @@ const ProfilePage = memo(() => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <ProfilePageHeader />
+      {validateErrors?.length &&
+        validateErrors.map((err) => (
+          <Text
+            key={err}
+            theme={TextTheme.ERROR}
+            text={validateErrorTranslates[err]}
+          />
+        ))}
       <ProfileCard
         onChangeFirstname={onChangeFirstname}
         onChangeLastname={onChangeLastname}
