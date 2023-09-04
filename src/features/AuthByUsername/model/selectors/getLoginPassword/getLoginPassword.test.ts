@@ -1,4 +1,3 @@
-import { type DeepPartial } from '@reduxjs/toolkit';
 import { type StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
 import { getLoginPassword } from './getLoginPassword';
 
@@ -10,7 +9,7 @@ describe('getLoginPassword', () => {
       },
     };
     expect(getLoginPassword(state as StateSchema)).toBe(
-      state.loginForm.password,
+      state.loginForm?.password,
     );
   });
 

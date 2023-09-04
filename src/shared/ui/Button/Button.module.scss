@@ -19,6 +19,11 @@
 .outline {
   border: 1px solid var(--primary-color);
   background: none;
+
+  &--red {
+    border: 1px solid var(--red-light);
+    color: var(--red-light);
+  }
 }
 
 .background {

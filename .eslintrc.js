@@ -37,6 +37,7 @@ module.exports = {
         '@typescript-eslint/ban-types': 'off',
         '@typescript-eslint/ban-ts-comment': 'warn',
         '@typescript-eslint/prefer-ts-expect-error': 'warn',
+        'capitalized-comments': 'off',
       },
     },
     {

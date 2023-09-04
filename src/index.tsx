@@ -8,7 +8,7 @@ import 'app/styles/fonts/font.scss';
 import 'app/styles/index.scss';
 import { StoreProvider } from 'app/providers/StoreProvider';
 
-const root = createRoot(document.getElementById('app'));
+const root = createRoot(document.getElementById('app')!);
 root.render(
   <BrowserRouter>
     <StoreProvider>

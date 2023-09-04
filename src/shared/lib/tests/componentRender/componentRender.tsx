@@ -5,7 +5,6 @@ import i18nForTest from 'shared/config/i18n/i18nForTest';
 import { I18nextProvider } from 'react-i18next';
 import { StoreProvider } from 'app/providers/StoreProvider';
 import { type StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
-import { type DeepPartial } from '@reduxjs/toolkit';
 
 export type componentRenderOptions = {
   route?: string;

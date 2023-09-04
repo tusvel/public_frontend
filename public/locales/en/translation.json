@@ -12,5 +12,8 @@
   "Введите логин": "Enter username",
   "Введите пароль": "Enter password",
   "Выйти": "Logout",
-  "Вы ввели неверный логин или пароль": "You have entered an incorrect username or password"
+  "Вы ввели неверный логин или пароль": "You have entered an incorrect username or password",
+  "Профиль": "Profile",
+  "Выберите валюту": "Choose currency",
+  "Выберите страну": "Choose country"
 }

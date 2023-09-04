@@ -1,4 +1,4 @@
-import { type FC, memo, useCallback } from 'react';
+import { memo, useCallback } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './LoginForm.module.scss';
 import { Button } from 'shared/ui/Button/Button';
@@ -27,7 +27,7 @@ export type LoginFormProps = {
   onSuccess: () => void;
 };
 
-const LoginForm: FC = memo((props: LoginFormProps) => {
+const LoginForm = memo((props: LoginFormProps) => {
   const { onSuccess } = props;
   const { t } = useTranslation();
   const dispatch = useAppDispatch();

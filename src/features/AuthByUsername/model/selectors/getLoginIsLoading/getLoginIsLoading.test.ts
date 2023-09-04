@@ -1,4 +1,3 @@
-import { type DeepPartial } from '@reduxjs/toolkit';
 import { type StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
 import { getLoginIsLoading } from './getLoginIsLoading';
 
@@ -10,7 +9,7 @@ describe('getLoginIsLoading', () => {
       },
     };
     expect(getLoginIsLoading(state as StateSchema)).toBe(
-      state.loginForm.isLoading,
+      state.loginForm?.isLoading,
     );
   });
 
