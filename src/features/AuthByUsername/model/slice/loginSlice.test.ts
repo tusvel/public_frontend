@@ -1,7 +1,7 @@
 import { type LoginSchema } from '../types/loginSchema';
 import { loginActions, loginReducer } from './loginSlice';
 
-describe('loginSlice.test', () => {
+describe('loginSlice', () => {
   test('test set username', () => {
     const state: DeepPartial<LoginSchema> = { username: '123' };
     expect(
