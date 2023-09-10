@@ -21,5 +21,7 @@ body,
 
 .page-wrapper {
   flex: 1 0 auto;
-  padding: 20px;
+  padding: 20px 20px 20px 45px;
+  overflow-y: auto;
+  height: calc(100vh - var(--navbar-height));
 }
