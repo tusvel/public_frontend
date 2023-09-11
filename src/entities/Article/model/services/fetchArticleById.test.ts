@@ -1,24 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import ArticleDetailsPage from './ArticleDetailsPage';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
-import { type Article } from 'entities/Article';
-import {
-  ArticleBlockType,
-  ArticleType,
-} from 'entities/Article/model/types/article';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-
-const meta = {
-  title: 'pages/ArticleDetailsPage',
-  component: ArticleDetailsPage,
-  parameters: {
-    layout: 'fullscreen',
-  },
-} satisfies Meta<typeof ArticleDetailsPage>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
+import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
+import { fetchArticleById } from './fetchArticleById';
+import { type Article, ArticleBlockType, ArticleType } from '../types/article';
 
 const article: Article = {
   id: '1',
@@ -91,25 +73,24 @@ const article: Article = {
   ],
 };
 
-export const Primary: Story = {
-  args: {},
-  decorators: [
-    StoreDecorator({
-      articleDetails: {
-        data: article,
-      },
-    }),
-  ],
-};
+describe('fetchProfileData', () => {
+  test('success', async () => {
+    const thunk = new TestAsyncThunk(fetchArticleById);
+    thunk.api.get.mockReturnValue(Promise.resolve({ data: article }));
+    const result = await thunk.callThunk('1');
 
-export const PrimaryDark: Story = {
-  args: {},
-  decorators: [
-    ThemeDecorator(Theme.DARK),
-    StoreDecorator({
-      articleDetails: {
-        data: article,
-      },
-    }),
-  ],
-};
+    expect(thunk.api.get).toHaveBeenCalled();
+    expect(result.meta.requestStatus).toBe('fulfilled');
+    expect(result.payload).toEqual(article);
+  });
+
+  test('error', async () => {
+    const thunk = new TestAsyncThunk(fetchArticleById);
+    thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
+    const result = await thunk.callThunk('1');
+
+    expect(thunk.api.get).toHaveBeenCalled();
+    expect(result.meta.requestStatus).toBe('rejected');
+    expect(result.payload).toBe('error');
+  });
+});

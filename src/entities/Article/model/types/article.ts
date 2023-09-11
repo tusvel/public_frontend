@@ -42,7 +42,7 @@ export type Article = {
   subtitle: string;
   img: string;
   views: number;
-  createdAd: string;
+  createdAt: string;
   type: ArticleType[];
   blocks: ArticleBlock[];
 };

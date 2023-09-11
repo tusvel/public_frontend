@@ -1,4 +1,4 @@
-import { memo, useEffect } from 'react';
+import { memo, useCallback, useEffect } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticleDetails.module.scss';
 import {
@@ -14,13 +14,21 @@ import {
   getArticleDetailsError,
   getArticleDetailsIsLoading,
 } from '../../model/selectors/articleDetails';
-import { Text, TextAlign } from 'shared/ui/Text/Text';
+import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
+import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
+import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
+import { Icon } from 'shared/ui/Icon/Icon';
+import { type ArticleBlock, ArticleBlockType } from '../../model/types/article';
+import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 
 type ArticleDetailsProps = {
   className?: string;
-  id: string;
+  id?: string;
 };
 
 const reducers: ReducersList = {
@@ -35,13 +43,46 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   const error = useSelector(getArticleDetailsError);
 
   useEffect(() => {
-    void dispatch(fetchArticleById(id));
+    if (__PROJECT__ !== 'storybook' && id !== undefined) {
+      void dispatch(fetchArticleById(id));
+    }
   }, [dispatch, id]);
+
+  const renderBlock = useCallback((block: ArticleBlock) => {
+    switch (block.type) {
+      case ArticleBlockType.CODE:
+        return (
+          <ArticleCodeBlockComponent
+            className={cls.block}
+            key={block.id}
+            block={block}
+          />
+        );
+      case ArticleBlockType.IMAGE:
+        return (
+          <ArticleImageBlockComponent
+            className={cls.block}
+            key={block.id}
+            block={block}
+          />
+        );
+      case ArticleBlockType.TEXT:
+        return (
+          <ArticleTextBlockComponent
+            className={cls.block}
+            key={block.id}
+            block={block}
+          />
+        );
+      default:
+        return null;
+    }
+  }, []);
 
   let content;
   if (isLoading) {
     content = (
-      <div>
+      <>
         <Skeleton
           className={cls.avatar}
           width={200}
@@ -52,20 +93,39 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
         <Skeleton className={cls.skeleton} width={600} height={24} />
         <Skeleton className={cls.skeleton} width="100%" height={200} />
         <Skeleton className={cls.skeleton} width="100%" height={200} />
-      </div>
+      </>
     );
   } else if (error) {
     content = (
-      <div>
+      <>
         <Text
           align={TextAlign.CENTER}
           title={t('Произошла ошибка при загрузке статьи')}
         />
-      </div>
+      </>
     );
   } else {
-    // eslint-disable-next-line i18next/no-literal-string
-    content = <div>ARTICLE DETAILS</div>;
+    content = (
+      <>
+        <div className={cls.avatarWrapper}>
+          <Avatar size={200} src={article?.img} className={cls.avatar} />
+        </div>
+        <Text
+          title={article?.title}
+          text={article?.subtitle}
+          size={TextSize.L}
+        />
+        <div className={cls.articleInfo}>
+          <Icon Svg={EyeIcon} className={cls.icon} />
+          <Text text={String(article?.views)} />
+        </div>
+        <div className={cls.articleInfo}>
+          <Icon Svg={CalendarIcon} className={cls.icon} />
+          <Text text={String(article?.createdAt)} />
+        </div>
+        {article?.blocks.map((item) => renderBlock(item))}
+      </>
+    );
   }
 
   return (

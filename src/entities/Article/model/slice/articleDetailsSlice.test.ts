@@ -1,24 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import ArticleDetailsPage from './ArticleDetailsPage';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
+import { type ArticleDetailsSchema } from '../types/articleDetailsSchema';
+import { ArticleDetailsReducer } from './articleDetailsSlice';
+import { fetchArticleById } from '../services/fetchArticleById';
 import { type Article } from 'entities/Article';
 import {
   ArticleBlockType,
   ArticleType,
 } from 'entities/Article/model/types/article';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-
-const meta = {
-  title: 'pages/ArticleDetailsPage',
-  component: ArticleDetailsPage,
-  parameters: {
-    layout: 'fullscreen',
-  },
-} satisfies Meta<typeof ArticleDetailsPage>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
 
 const article: Article = {
   id: '1',
@@ -91,25 +78,30 @@ const article: Article = {
   ],
 };
 
-export const Primary: Story = {
-  args: {},
-  decorators: [
-    StoreDecorator({
-      articleDetails: {
-        data: article,
-      },
-    }),
-  ],
-};
+describe('articleDetailsSlice', () => {
+  test('test fetch article by id service pending', () => {
+    const state: DeepPartial<ArticleDetailsSchema> = {};
+    expect(
+      ArticleDetailsReducer(
+        state as ArticleDetailsSchema,
+        fetchArticleById.pending,
+      ),
+    ).toEqual({
+      error: undefined,
+      isLoading: true,
+    });
+  });
 
-export const PrimaryDark: Story = {
-  args: {},
-  decorators: [
-    ThemeDecorator(Theme.DARK),
-    StoreDecorator({
-      articleDetails: {
-        data: article,
-      },
-    }),
-  ],
-};
+  test('test fetch article by id service fulfilled', () => {
+    const state: DeepPartial<ArticleDetailsSchema> = {};
+    expect(
+      ArticleDetailsReducer(
+        state as ArticleDetailsSchema,
+        fetchArticleById.fulfilled(article, '', ''),
+      ),
+    ).toEqual({
+      isLoading: false,
+      data: article,
+    });
+  });
+});
