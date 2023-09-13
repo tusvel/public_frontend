@@ -1,4 +1,3 @@
-import { type CounterSchema } from 'entities/Counter';
 import { type UserSchema } from 'entities/User';
 import { type LoginSchema } from 'features/AuthByUsername';
 import {
@@ -12,15 +11,16 @@ import { type ProfileSchema } from 'entities/Profile';
 import { type AxiosInstance } from 'axios';
 import { type NavigateFunction } from 'react-router/dist/lib/hooks';
 import { type ArticleDetailsSchema } from 'entities/Article';
+import { type ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 
 export type StateSchema = {
-  counter: CounterSchema;
   user: UserSchema;
 
   // Асинхронные редюсеры
   profile?: ProfileSchema;
   loginForm?: LoginSchema;
   articleDetails?: ArticleDetailsSchema;
+  articleDetailsComments?: ArticleDetailsCommentsSchema;
 };
 
 export type StateSchemaKey = keyof StateSchema;
