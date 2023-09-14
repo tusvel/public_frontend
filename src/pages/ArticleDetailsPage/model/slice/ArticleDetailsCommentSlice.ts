@@ -17,7 +17,7 @@ export const getArticleComments = commentAdapter.getSelectors<StateSchema>(
 );
 
 const articleDetailsCommentsSlice = createSlice({
-  name: 'comment',
+  name: 'articleDetailsCommentsSlice',
   initialState: commentAdapter.getInitialState<ArticleDetailsCommentsSchema>({
     error: undefined,
     isLoading: false,

@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,36 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "-juCdQe"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "hello my friend",
+      "id": "Ux8dSR8"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "sadf",
+      "id": "yv-skPe"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "test",
+      "id": "F3aJNNr"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "1 100",
+      "id": "pv1cgDd"
     }
   ],
   "users": [
@@ -115,17 +147,31 @@
       "username": "user",
       "password": "123",
       "role": "USER",
-      "avatar":  "https://steamavatar.io/img/1477684926Qx9fW.png"
+      "avatar": "https://steamavatar.io/img/1477684926Qx9fW.png"
     }
   ],
-  "profile": {
-    "first": "Alex",
-    "lastname": "Lev",
-    "age": 16,
-    "currency": "EUR",
-    "country": "Russia",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Alex666",
+      "lastname": "Lev",
+      "age": 16,
+      "currency": "EUR",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://i.redd.it/pkyqko89eim41.jpg"
+    },
+    {
+      "id": "2",
+      "first": "MR",
+      "lastname": "Gru",
+      "age": 36,
+      "currency": "RUB",
+      "country": "USA",
+      "city": "London",
+      "username": "MGRU",
+      "avatar": "https://steamavatar.io/img/1477684926Qx9fW.png"
+    }
+  ]
 }

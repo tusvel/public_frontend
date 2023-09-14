@@ -12,6 +12,7 @@ import { type AxiosInstance } from 'axios';
 import { type NavigateFunction } from 'react-router/dist/lib/hooks';
 import { type ArticleDetailsSchema } from 'entities/Article';
 import { type ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
+import { type AddCommentFormSchema } from 'features/AddCommentForm/model/types/AddCommentFormSchema';
 
 export type StateSchema = {
   user: UserSchema;
@@ -21,6 +22,7 @@ export type StateSchema = {
   loginForm?: LoginSchema;
   articleDetails?: ArticleDetailsSchema;
   articleDetailsComments?: ArticleDetailsCommentsSchema;
+  addCommentForm?: AddCommentFormSchema;
 };
 
 export type StateSchemaKey = keyof StateSchema;
