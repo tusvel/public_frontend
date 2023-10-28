@@ -1,0 +1,7 @@
+.viewIcon {
+  fill: var(--card-bg);
+
+  &.selected {
+    fill: var(--primary-color);
+  }
+}

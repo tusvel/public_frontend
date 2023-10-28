@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { CommentList } from './CommentList';
+import Avatar from 'shared/assets/tests/avatar.jpg';
 
 const meta = {
   title: 'entities/Comment/CommentList',
@@ -19,12 +20,12 @@ export const Primary: Story = {
       {
         id: '1',
         text: 'hello world',
-        user: { id: '1', username: 'Vasya' },
+        user: { id: '1', username: 'Vasya', avatar: Avatar as string },
       },
       {
         id: '2',
         text: 'my friend',
-        user: { id: '2', username: 'Sanya' },
+        user: { id: '2', username: 'Sanya', avatar: Avatar as string },
       },
     ],
   },

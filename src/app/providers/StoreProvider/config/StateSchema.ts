@@ -13,6 +13,7 @@ import { type NavigateFunction } from 'react-router/dist/lib/hooks';
 import { type ArticleDetailsSchema } from 'entities/Article';
 import { type ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 import { type AddCommentFormSchema } from 'features/AddCommentForm/model/types/AddCommentFormSchema';
+import { type ArticlesPageSchema } from 'pages/ArticlesPage';
 
 export type StateSchema = {
   user: UserSchema;
@@ -23,6 +24,7 @@ export type StateSchema = {
   articleDetails?: ArticleDetailsSchema;
   articleDetailsComments?: ArticleDetailsCommentsSchema;
   addCommentForm?: AddCommentFormSchema;
+  articlesPage?: ArticlesPageSchema;
 };
 
 export type StateSchemaKey = keyof StateSchema;
