@@ -6,4 +6,8 @@ export type ArticlesPageSchema = {
   error?: string;
 
   view: ArticleView;
+  // pagination
+  page: number;
+  limit?: number;
+  hasMore: boolean;
 } & EntityState<Article>;
