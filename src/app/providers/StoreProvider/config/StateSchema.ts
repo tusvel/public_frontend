@@ -9,7 +9,6 @@ import {
 } from '@reduxjs/toolkit';
 import { type ProfileSchema } from 'entities/Profile';
 import { type AxiosInstance } from 'axios';
-import { type NavigateFunction } from 'react-router/dist/lib/hooks';
 import { type ArticleDetailsSchema } from 'entities/Article';
 import { type ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 import { type AddCommentFormSchema } from 'features/AddCommentForm/model/types/AddCommentFormSchema';
@@ -28,6 +27,7 @@ export type StateSchema = {
 };
 
 export type StateSchemaKey = keyof StateSchema;
+export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>;
 
 export type ReduxStoreWithManager = {
   reducerManager: ReducerManager;
@@ -38,11 +38,12 @@ export type ReducerManager = {
   reduce: (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>;
   add: (key: StateSchemaKey, reducer: Reducer) => void;
   remove: (key: StateSchemaKey) => void;
+  // true - вмонтирован, false - демонтирован
+  getMountedReducers: () => MountedReducers;
 };
 
 export type ThunkExtraArg = {
   api: AxiosInstance;
-  navigate?: NavigateFunction;
 };
 
 export type ThunkConfig<T> = {

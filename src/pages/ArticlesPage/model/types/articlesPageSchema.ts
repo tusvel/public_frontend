@@ -10,4 +10,6 @@ export type ArticlesPageSchema = {
   page: number;
   limit?: number;
   hasMore: boolean;
+
+  _inited: boolean;
 } & EntityState<Article>;
