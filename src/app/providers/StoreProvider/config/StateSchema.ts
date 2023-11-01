@@ -13,9 +13,11 @@ import { type ArticleDetailsSchema } from 'entities/Article';
 import { type ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 import { type AddCommentFormSchema } from 'features/AddCommentForm/model/types/AddCommentFormSchema';
 import { type ArticlesPageSchema } from 'pages/ArticlesPage';
+import { type ScrollSaveSchema } from 'widgets/ScrollSave';
 
 export type StateSchema = {
   user: UserSchema;
+  scrollSave: ScrollSaveSchema;
 
   // Асинхронные редюсеры
   profile?: ProfileSchema;
