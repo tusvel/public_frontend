@@ -10,6 +10,8 @@ export default ({ config }: { config: webpack.Configuration }) => {
     build: '',
     html: '',
     src: path.resolve(__dirname, '..', '..', 'src'),
+    locales: '',
+    buildLocales: '',
   };
 
   // Plugins
