@@ -10,7 +10,7 @@ import {
 import { type ProfileSchema } from 'entities/Profile';
 import { type AxiosInstance } from 'axios';
 import { type ArticleDetailsSchema } from 'entities/Article';
-import { type ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
+import { type ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 import { type AddCommentFormSchema } from 'features/AddCommentForm/model/types/AddCommentFormSchema';
 import { type ArticlesPageSchema } from 'pages/ArticlesPage';
 import { type ScrollSaveSchema } from 'widgets/ScrollSave';
@@ -23,9 +23,9 @@ export type StateSchema = {
   profile?: ProfileSchema;
   loginForm?: LoginSchema;
   articleDetails?: ArticleDetailsSchema;
-  articleDetailsComments?: ArticleDetailsCommentsSchema;
   addCommentForm?: AddCommentFormSchema;
   articlesPage?: ArticlesPageSchema;
+  articleDetailsPage?: ArticleDetailsPageSchema;
 };
 
 export type StateSchemaKey = keyof StateSchema;
