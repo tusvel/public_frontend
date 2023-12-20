@@ -8,6 +8,10 @@ import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData } from '../../../entities/User/model/selectors/getUserAuthData/getUserAuthData';
 import { userActions } from '../../../entities/User';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { AppLinkTheme } from 'shared/ui/AppLink/AppLink.interface';
 
 type NavbarProps = {
   className?: string;
@@ -35,6 +39,18 @@ export const Navbar = memo((props: NavbarProps) => {
   if (authData) {
     return (
       <header className={classNames(cls.Navbar, {}, [className])}>
+        <Text
+          theme={TextTheme.INVERTED}
+          className={cls.appName}
+          title={t('Ulbi TV App')}
+        />
+        <AppLink
+          theme={AppLinkTheme.INVERTED_PRIMARY}
+          to={RoutePath.article_create}
+          className={cls.createLink}
+        >
+          {t('Создать статью')}
+        </AppLink>
         <div className={cls.links}>
           <Button theme={ButtonTheme.CLEAR_INVERTED} onClick={onLogout}>
             {t('Выйти')}
