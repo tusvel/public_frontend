@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticleList.module.scss';
 import { type Article, ArticleView } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
-import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSeleton';
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSeleton';
 import { useTranslation } from 'react-i18next';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { List, WindowScroller } from 'react-virtualized';

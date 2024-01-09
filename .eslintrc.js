@@ -51,7 +51,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'i18next', 'react-hooks'],
+  plugins: ['react', 'i18next', 'react-hooks', 'tusvel'],
   settings: {
     react: {
       version: '18.2.0',
@@ -64,6 +64,7 @@ module.exports = {
     'new-cap': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
+    'tusvel/path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,

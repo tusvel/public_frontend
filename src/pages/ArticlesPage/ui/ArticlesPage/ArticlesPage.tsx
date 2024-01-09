@@ -21,7 +21,7 @@ import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPag
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticlesPage.module.scss';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
-import { ArticlesPageFilters } from 'pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters';
+import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { useSearchParams } from 'react-router-dom';
 
 type ArticlesPageProps = {

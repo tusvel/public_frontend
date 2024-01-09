@@ -18,6 +18,8 @@ const App = () => {
     dispatch(userActions.initAuthData());
   }, [theme, dispatch]);
 
+  console.log(<div key="value" />);
+
   return (
     <div className={classNames('app', {}, [theme])}>
       <Navbar />

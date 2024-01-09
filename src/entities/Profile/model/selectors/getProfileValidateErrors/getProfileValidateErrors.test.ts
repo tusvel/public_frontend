@@ -1,6 +1,6 @@
 import { type StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
 import { getProfileValidateErrors } from './getProfileValidateErrors';
-import { ValidateProfileError } from 'entities/Profile/model/types/profile';
+import { ValidateProfileError } from '../../types/profile';
 
 describe('getProfileValidateErrors', () => {
   test('should return profile readonly', () => {

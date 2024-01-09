@@ -2,7 +2,7 @@ import React, { memo, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Sidebar.module.scss';
 import { Button } from 'shared/ui/Button/Button';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
 import { ButtonTheme } from 'shared/ui/Button/Button.interface';
 import { SidebarItemsList } from '../../model/items';

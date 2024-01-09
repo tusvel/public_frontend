@@ -1,5 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { getLogin } from 'features/AuthByUsername/model/selectors/getLogin/getLogin';
+import { getLogin } from '../getLogin/getLogin';
 
 export const getLoginIsLoading = createSelector(
   getLogin,

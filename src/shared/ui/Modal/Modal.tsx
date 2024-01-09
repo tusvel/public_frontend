@@ -11,7 +11,7 @@ import React, {
 import { classNames, type Mods } from 'shared/lib/classNames/classNames';
 import cls from './Modal.module.scss';
 import { type ModalProps } from './Modal.interface';
-import { Portal } from 'shared/ui/Portal/Portal';
+import { Portal } from '../Portal/Portal';
 import { useTheme } from 'app/providers/ThemeProvider';
 
 const ANIMATION_DELAY = 300;

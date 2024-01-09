@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { ArticleView } from 'entities/Article';
+import { ArticleView } from '../../model/types/article';
 import ListIcon from 'shared/assets/icons/list-24-24.svg';
 import TiledIcon from 'shared/assets/icons/tiled-24-24.svg';
 import { Button } from 'shared/ui/Button/Button';

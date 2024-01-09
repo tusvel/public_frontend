@@ -1,7 +1,7 @@
 import {
   type ArticleDetailsCommentsSchema,
   type ArticleDetailsRecommendationSchema,
-} from 'pages/ArticleDetailsPage';
+} from '../../../ArticleDetailsPage';
 
 export type ArticleDetailsPageSchema = {
   comments: ArticleDetailsCommentsSchema;
