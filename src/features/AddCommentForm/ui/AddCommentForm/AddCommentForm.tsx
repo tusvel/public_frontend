@@ -18,6 +18,7 @@ import { Input } from 'shared/ui/Input/Input';
 import { useTranslation } from 'react-i18next';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button } from 'shared/ui/Button/Button';
+import { HStack } from 'shared/ui/Stack';
 
 export type AddCommentFormProps = {
   className?: string;
@@ -49,7 +50,11 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.AddCommentForm, {}, [className])}>
+      <HStack
+        max
+        justify="between"
+        className={classNames(cls.AddCommentForm, {}, [className])}
+      >
         <Input
           value={text}
           onChange={onCommentTextChange}
@@ -57,7 +62,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
           className={cls.input}
         />
         <Button onClick={onSendHandler}>{t('Отправить')}</Button>
-      </div>
+      </HStack>
     </DynamicModuleLoader>
   );
 });

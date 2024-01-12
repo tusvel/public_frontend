@@ -24,6 +24,8 @@ import { useTranslation } from 'react-i18next';
 import { ValidateProfileError } from 'entities/Profile/model/types/profile';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useParams } from 'react-router-dom';
+import { Page } from 'widgets/Page/Page';
+import { VStack } from 'shared/ui/Stack/VStack/VStack';
 
 const reducers: ReducersList = {
   profile: profileReducer,
@@ -103,28 +105,32 @@ const ProfilePage = memo(() => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <ProfilePageHeader />
-      {validateErrors?.length &&
-        validateErrors.map((err) => (
-          <Text
-            key={err}
-            theme={TextTheme.ERROR}
-            text={validateErrorTranslates[err]}
+      <Page>
+        <VStack gap="16" max>
+          <ProfilePageHeader />
+          {validateErrors?.length &&
+            validateErrors.map((err) => (
+              <Text
+                key={err}
+                theme={TextTheme.ERROR}
+                text={validateErrorTranslates[err]}
+              />
+            ))}
+          <ProfileCard
+            onChangeFirstname={onChangeFirstname}
+            onChangeLastname={onChangeLastname}
+            onChangeAge={onChangeAge}
+            onChangeCity={onChangeCity}
+            onChangeAvatar={onChangeAvatar}
+            onChangeCurrency={onChangeCurrency}
+            onChangeCountry={onChangeCountry}
+            data={formData}
+            error={error}
+            isLoading={isLoading}
+            readonly={readonly}
           />
-        ))}
-      <ProfileCard
-        onChangeFirstname={onChangeFirstname}
-        onChangeLastname={onChangeLastname}
-        onChangeAge={onChangeAge}
-        onChangeCity={onChangeCity}
-        onChangeAvatar={onChangeAvatar}
-        onChangeCurrency={onChangeCurrency}
-        onChangeCountry={onChangeCountry}
-        data={formData}
-        error={error}
-        isLoading={isLoading}
-        readonly={readonly}
-      />
+        </VStack>
+      </Page>
     </DynamicModuleLoader>
   );
 });
