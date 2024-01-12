@@ -31,6 +31,15 @@ export const SizeL: Story = {
   },
 };
 
+export const SizeS: Story = {
+  args: {
+    title:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, omnis!',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem error incidunt modi odit possimus vitae voluptatum. Accusamus, delectus, magni.',
+    size: TextSize.S,
+  },
+};
+
 export const WithOnlyTitle: Story = {
   args: {
     title:
