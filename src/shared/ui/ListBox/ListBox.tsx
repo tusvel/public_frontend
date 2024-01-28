@@ -4,14 +4,13 @@ import cls from './ListBox.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from '../Button/Button';
 import { HStack } from '../Stack';
+import { type DirectionType } from 'shared/types/ui';
 
 export type ListBoxTypeItem = {
   value: string;
   content: ReactNode;
   disabled?: boolean;
 };
-
-type ListBoxDirectionType = 'top' | 'bottom';
 
 type ListBoxType = {
   items?: ListBoxTypeItem[];
@@ -21,12 +20,14 @@ type ListBoxType = {
   onChange?: <T extends string>(value: T) => void;
   readonly?: boolean;
   label?: string;
-  direction?: ListBoxDirectionType;
+  direction?: DirectionType;
 };
 
-const mapDirectionClasses: Record<ListBoxDirectionType, string> = {
-  bottom: cls.bottom,
-  top: cls.top,
+const mapDirectionClasses: Record<DirectionType, string> = {
+  'top left': cls.topLeft,
+  'top right': cls.topRight,
+  'bottom left': cls.bottomLeft,
+  'bottom right': cls.bottomRight,
 };
 
 export function ListBox(props: ListBoxType) {
@@ -38,7 +39,7 @@ export function ListBox(props: ListBoxType) {
     onChange,
     readonly,
     label,
-    direction = 'bottom',
+    direction = 'bottom left',
   } = props;
 
   const classesOptions = [mapDirectionClasses[direction]];
