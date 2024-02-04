@@ -56,6 +56,19 @@ const config: Config = {
   // The glob patterns Jest uses to detect test files
   testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
 
+  // Use this configuration option to add custom reports to Jest
+  reporters: [
+    'default',
+    [
+      'jest-html-reporters',
+      {
+        publicPath: '<rootDir>/reports/unit',
+        openReport: true,
+        filename: 'report.html',
+      },
+    ],
+  ],
+
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -122,9 +135,6 @@ const config: Config = {
 
   // Run tests from one or more projects
   // projects: undefined,
-
-  // Use this configuration option to add custom reporters to Jest
-  // reporters: undefined,
 
   // Automatically reset mock state before every test
   // resetMocks: false,
