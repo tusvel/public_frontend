@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Navbar.module.scss';
 import { Button } from 'shared/ui/Button/Button';
 import { ButtonTheme } from 'shared/ui/Button/Button.interface';
-import { LoginModal } from 'features/AuthByUsername';
+import { LoginModal } from 'features/authByUsername';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData } from '../../../entities/User/model/selectors/getUserAuthData/getUserAuthData';

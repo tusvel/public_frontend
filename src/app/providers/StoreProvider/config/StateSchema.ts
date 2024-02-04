@@ -1,5 +1,5 @@
 import { type UserSchema } from 'entities/User';
-import { type LoginSchema } from 'features/AuthByUsername';
+import { type LoginSchema } from 'features/authByUsername';
 import {
   type AnyAction,
   type CombinedState,
@@ -7,17 +7,19 @@ import {
   type Reducer,
   type ReducersMapObject,
 } from '@reduxjs/toolkit';
-import { type ProfileSchema } from 'entities/Profile';
 import { type AxiosInstance } from 'axios';
 import { type ArticleDetailsSchema } from 'entities/Article';
 import { type ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
-import { type AddCommentFormSchema } from 'features/AddCommentForm/model/types/AddCommentFormSchema';
+import { type AddCommentFormSchema } from 'features/addCommentForm/model/types/AddCommentFormSchema';
 import { type ArticlesPageSchema } from 'pages/ArticlesPage';
 import { type ScrollSaveSchema } from 'widgets/ScrollSave';
+import { type rtkApi } from 'shared/api/rtkApi';
+import { type ProfileSchema } from 'features/editableProfileCard';
 
 export type StateSchema = {
   user: UserSchema;
   scrollSave: ScrollSaveSchema;
+  [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
   // Асинхронные редюсеры
   profile?: ProfileSchema;

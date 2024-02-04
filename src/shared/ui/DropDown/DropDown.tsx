@@ -35,7 +35,7 @@ export function DropDown(props: DropDownType) {
     <Menu as={'div'} className={classNames(cls.dropdown, {}, [className])}>
       <Menu.Button className={cls.button}>{trigger}</Menu.Button>
       <Menu.Items className={classNames(cls.menu, {}, [menuClasses])}>
-        {items.map((item) => {
+        {items.map((item, index) => {
           const content = ({ active }: { active: boolean }) => (
             <button
               onClick={item.onClick}
@@ -54,7 +54,7 @@ export function DropDown(props: DropDownType) {
           }
 
           return (
-            <Menu.Item key={item.href} as={Fragment}>
+            <Menu.Item key={index} as={Fragment}>
               {content}
             </Menu.Item>
           );
