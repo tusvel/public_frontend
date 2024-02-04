@@ -590,14 +590,21 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://i.redd.it/pkyqko89eim41.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
+      "avatar": "https://steamavatar.io/img/1477684926Qx9fW.png"
+    },
+    {
+      "id": "2",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
       "avatar": "https://steamavatar.io/img/1477684926Qx9fW.png"
     }
   ],
