@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import cls from './ArticleDetailsComments.module.scss';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { AddCommentForm } from 'features/addCommentForm';
@@ -9,7 +9,6 @@ import { getArticleComments } from '../../model/slice/articleDetailsCommentSlice
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { VStack } from 'shared/ui/Stack';
 
@@ -32,9 +31,9 @@ export const ArticleDetailsComments = (props: ArticleDetailsCommentsProps) => {
     [dispatch],
   );
 
-  useInitialEffect(() => {
+  useEffect(() => {
     void dispatch(fetchCommentsByArticleId(id));
-  });
+  }, [dispatch, id]);
 
   return (
     <VStack gap={'16'} max className={className}>
