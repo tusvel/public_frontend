@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react';
+import { Suspense, useCallback, useEffect } from 'react';
 import cls from './ArticleDetailsComments.module.scss';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { AddCommentForm } from 'features/addCommentForm';
@@ -42,7 +42,9 @@ export const ArticleDetailsComments = (props: ArticleDetailsCommentsProps) => {
         className={cls.commentTitle}
         title={t('Комментарии')}
       />
-      <AddCommentForm onSendComment={onSendComment} />
+      <Suspense fallback={'...'}>
+        <AddCommentForm onSendComment={onSendComment} />
+      </Suspense>
       <CommentList isLoading={commentsIsLoading} comments={comments} />
     </VStack>
   );

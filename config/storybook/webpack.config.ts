@@ -15,13 +15,15 @@ export default ({ config }: { config: webpack.Configuration }) => {
   };
 
   // Plugins
-  config.plugins!.push(
-    new webpack.DefinePlugin({
-      __IS_DEV__: JSON.stringify(true),
-      __API__: JSON.stringify(''),
-      __PROJECT__: JSON.stringify('storybook'),
-    }),
-  );
+  if (config.plugins) {
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        __IS_DEV__: JSON.stringify(true),
+        __API__: JSON.stringify('https://public_frontend.ru'),
+        __PROJECT__: JSON.stringify('storybook'),
+      }),
+    );
+  }
 
   // Loaders
   config.module!.rules!.push(buildCssLoader(true));

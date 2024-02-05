@@ -26,7 +26,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
   const { className } = props;
   const { id } = useParams<{ id: string }>();
 
-  if (!id) {
+  if (!id && __PROJECT__ !== 'storybook') {
     return <div className={className}>{t('Статья не найдена')}</div>;
   }
 
