@@ -10,7 +10,8 @@ import {
   getArticlesPageType,
 } from '../../selectors/articlesPageSelectors';
 import { addQueryParams } from 'shared/lib/url/addQueryParams/addQueryParams';
-import { ArticleType } from 'entities/Article/model/types/article';
+
+import { ArticleType } from 'entities/Article/model/consts/articleConsts';
 
 type FetchArticlesListProps = {
   replace?: boolean;

@@ -3,11 +3,11 @@ import ArticleDetailsPage from './ArticleDetailsPage';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { type Article } from 'entities/Article';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import {
   ArticleBlockType,
   ArticleType,
-} from 'entities/Article/model/types/article';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+} from 'entities/Article/model/consts/articleConsts';
 
 const meta = {
   title: 'pages/ArticleDetailsPage',

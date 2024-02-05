@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ArticleRecommendationsList } from './ArticleRecommendationsList';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { type Article } from 'entities/Article';
-import { ArticleType } from 'entities/Article/model/types/article';
 import { UserRole } from 'entities/User';
+import { ArticleType } from 'entities/Article/model/consts/articleConsts';
 
 const meta = {
   title: 'features/ArticleRecommendationsList',

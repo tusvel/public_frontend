@@ -26,6 +26,8 @@
     "esModuleInterop": true,
     // Строгий рижем
     "strict": true,
+    // Disabled types in build, for migrate on babel loader.
+    "isolatedModules": true
   },
   "ts-node": {
     "compilerOptions": {
