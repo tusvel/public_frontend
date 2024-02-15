@@ -79,7 +79,6 @@
     "jest-environment-jsdom": "^29.6.1",
     "jest-html-reporters": "^3.1.7",
     "json-server": "^0.17.3",
-    "loki": "^0.32.0",
     "mini-css-extract-plugin": "^2.7.6",
     "prettier": "3.0.0",
     "reg-cli": "^0.17.7",
@@ -102,7 +101,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@reduxjs/toolkit": "^1.9.5",
-    "axios": "^1.4.0",
+    "axios": "1.6.7",
     "i18next": "^23.2.11",
     "i18next-browser-languagedetector": "^7.1.0",
     "i18next-http-backend": "^2.2.1",
