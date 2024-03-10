@@ -7,7 +7,8 @@ import {buildBabelLoader} from './loaders/buildBabelLoader';
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   const {isDev} = options;
   
-  const babel = buildBabelLoader(options);
+  const codeBabelLoader = buildBabelLoader({...options, isTsx: false});
+  const tsxCodeBabelLoader = buildBabelLoader({...options, isTsx: true});
 
   const fileLoader = {
     test: /\.(png|jpe?g|gif|woff2|woff)$/i,
@@ -18,21 +19,22 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     ],
   };
 
-  const svg = buildSvgLoader();
+  const svgLoader = buildSvgLoader();
 
-  const scss = buildCssLoader(isDev);
+  const scssLoader = buildCssLoader(isDev);
 
-  const typeScript = {
-    test: /\.tsx?$/,
-    use: 'ts-loader',
-    exclude: /node_modules/,
-  };
+  // если не используем typescript - нужен babel loader
+  // const typeScript = {
+  //   test: /\.tsx?$/,
+  //   use: 'ts-loader',
+  //   exclude: /node_modules/,
+  // };
 
   return [
     fileLoader,
-    svg,
-    babel,
-    typeScript,
-    scss,
+    svgLoader,
+    codeBabelLoader,
+    tsxCodeBabelLoader,
+    scssLoader,
   ];
 }
