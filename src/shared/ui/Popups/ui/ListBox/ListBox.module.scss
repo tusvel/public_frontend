@@ -1,0 +1,19 @@
+.options {
+  position: absolute;
+  z-index: 1000;
+  min-width: 100%;
+  background: var(--listbox-bg);
+
+  &.top {
+    bottom: 100%;
+  }
+}
+
+.item {
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &.active {
+    background: var(--inverted-secondary-color);
+  }
+}
