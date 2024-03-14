@@ -13,7 +13,7 @@ type PopoverProps = {
   children: ReactNode;
 };
 
-export const Popover = (props: PopoverProps) => {
+const Popover = (props: PopoverProps) => {
   const { className, trigger, direction = 'bottom left', children } = props;
 
   const classesOptions = [mapDirectionClasses[direction]];
@@ -34,3 +34,5 @@ export const Popover = (props: PopoverProps) => {
     </PopoverComponent>
   );
 };
+
+export default Popover;

@@ -13,6 +13,7 @@ import cls from './Modal.module.scss';
 import { type ModalProps } from './Modal.interface';
 import { Portal } from '../Portal/Portal';
 import { useTheme } from 'app/providers/ThemeProvider';
+import { Overlay } from '../Overlay/Overlay';
 
 const ANIMATION_DELAY = 300;
 
@@ -38,10 +39,6 @@ export const Modal: FC<ModalProps & PropsWithChildren> = (props) => {
       }, ANIMATION_DELAY);
     }
   }, [onClose]);
-
-  const onContentClick = useCallback((e: React.MouseEvent) => {
-    e.stopPropagation();
-  }, []);
 
   const mods: Mods = {
     [cls.opened]: isOpen,
@@ -75,11 +72,8 @@ export const Modal: FC<ModalProps & PropsWithChildren> = (props) => {
   return (
     <Portal>
       <div className={classNames(cls.Modal, mods, [className, theme])}>
-        <div className={cls.overlay} onClick={closeHandler}>
-          <div className={cls.content} onClick={onContentClick}>
-            {children}
-          </div>
-        </div>
+        <Overlay onClick={closeHandler} />
+        <div className={cls.content}>{children}</div>
       </div>
     </Portal>
   );
