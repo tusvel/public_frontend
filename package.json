@@ -102,7 +102,9 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
+    "@react-spring/web": "^9.7.3",
     "@reduxjs/toolkit": "^1.9.5",
+    "@use-gesture/react": "^10.3.0",
     "axios": "1.6.7",
     "fork-ts-checker-webpack-plugin": "^9.0.2",
     "i18next": "^23.2.11",
