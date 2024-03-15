@@ -1,8 +1,8 @@
 import { Menu } from '@headlessui/react';
 import cls from './DropDown.module.scss';
 import { Fragment, type ReactNode } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { type DirectionType } from 'shared/types/ui';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { type DirectionType } from '@/shared/types/ui';
 import { AppLink } from '../../../AppLink/AppLink';
 import popupCls from '../../styles/popup.module.scss';
 import { mapDirectionClasses } from '../../styles/const';

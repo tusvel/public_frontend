@@ -5,9 +5,9 @@ import {
   ArticleTypeTabs,
   type ArticleView,
   ArticleViewSelector,
-} from 'entities/Article';
+} from '@/entities/Article';
 import { articlesPagesActions } from '../../model/slices/articlesPageSlice';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import {
   getArticlesPageOrder,
@@ -16,16 +16,16 @@ import {
   getArticlesPageType,
   getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './ArticlesPageFilters.module.scss';
 import { useTranslation } from 'react-i18next';
-import { Card } from 'shared/ui/Card/Card';
-import { Input } from 'shared/ui/Input/Input';
-import { type SortOrder } from 'shared/types/sort';
+import { Card } from '@/shared/ui/Card/Card';
+import { Input } from '@/shared/ui/Input/Input';
+import { type SortOrder } from '@/shared/types/sort';
 import { fetchArticles } from '../../model/services/fetchArticlesList/fetchArticlesList';
-import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
+import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
 
-import { type ArticleType } from 'entities/Article/model/consts/articleConsts';
+import { type ArticleType } from '@/entities/Article/model/consts/articleConsts';
 
 type ArticlesPageProps = {
   className?: string;

@@ -1,10 +1,10 @@
 import { Popover as PopoverComponent } from '@headlessui/react';
 import type { ReactNode } from 'react';
-import type { DirectionType } from 'shared/types/ui';
+import type { DirectionType } from '@/shared/types/ui';
 import popupCls from '../../styles/popup.module.scss';
 import cls from './Popover.module.scss';
 import { mapDirectionClasses } from '../../styles/const';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 
 type PopoverProps = {
   className?: string;

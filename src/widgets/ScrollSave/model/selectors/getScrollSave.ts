@@ -1,4 +1,4 @@
-import { type StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
+import { type StateSchema } from '@/app/providers/StoreProvider/config/StateSchema';
 import { createSelector } from '@reduxjs/toolkit';
 
 export const getScrollSave = (state: StateSchema) => state.scrollSave.scroll;

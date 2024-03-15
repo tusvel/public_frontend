@@ -1,7 +1,7 @@
 import { type FC, type PropsWithChildren } from 'react';
 import { Provider } from 'react-redux';
 import { createReduxStore } from '../config/store';
-import { type StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
+import { type StateSchema } from '@/app/providers/StoreProvider/config/StateSchema';
 import { type ReducersMapObject } from '@reduxjs/toolkit';
 
 type StoreProviderProps = {

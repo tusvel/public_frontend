@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { CommentList } from './CommentList';
-import Avatar from 'shared/assets/tests/avatar.jpg';
+import Avatar from '@/shared/assets/tests/avatar.jpg';
 
 const meta = {
   title: 'entities/Comment/CommentList',

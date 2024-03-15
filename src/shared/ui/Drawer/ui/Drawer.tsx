@@ -1,10 +1,10 @@
 import { memo, type ReactNode, useCallback, useEffect } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { useTheme } from 'app/providers/ThemeProvider';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { useTheme } from '@/app/providers/ThemeProvider';
 import cls from './Drawer.module.scss';
 import { Overlay } from '../../Overlay/Overlay';
 import { Portal } from '../../Portal/Portal';
-import { useAnimationLibs } from 'shared/lib/components/AnimationProvider';
+import { useAnimationLibs } from '@/shared/lib/components/AnimationProvider';
 
 type DrawerProps = {
   className?: string;

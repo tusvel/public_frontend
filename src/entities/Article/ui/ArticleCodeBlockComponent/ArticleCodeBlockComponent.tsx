@@ -1,5 +1,5 @@
 import { type FC } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './ArticleCodeBlockComponent.module.scss';
 import { type ArticleCodeBlock } from '../../model/types/article';
 import { Code } from '../../../../shared/ui/Code/Code';

@@ -1,10 +1,10 @@
 import type { ReactNode } from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
-import i18nForTest from 'shared/config/i18n/i18nForTest';
+import i18nForTest from '@/shared/config/i18n/i18nForTest';
 import { I18nextProvider } from 'react-i18next';
-import { StoreProvider } from 'app/providers/StoreProvider';
-import { type StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
+import { StoreProvider } from '@/app/providers/StoreProvider';
+import { type StateSchema } from '@/app/providers/StoreProvider/config/StateSchema';
 import type { ReducersMapObject } from '@reduxjs/toolkit';
 
 export type componentRenderOptions = {
