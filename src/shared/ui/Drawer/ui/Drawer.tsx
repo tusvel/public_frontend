@@ -103,13 +103,13 @@ const DrawerAsync = (props: DrawerProps) => {
     return null;
   }
 
-  return (
-    <AnimationProvider>
-      <DrawerContent {...props} />
-    </AnimationProvider>
-  );
+  return <DrawerContent {...props} />;
 };
 
-const Drawer = (props: DrawerProps) => <DrawerAsync {...props} />;
+const Drawer = (props: DrawerProps) => (
+  <AnimationProvider>
+    <DrawerAsync {...props} />
+  </AnimationProvider>
+);
 
 export default Drawer;

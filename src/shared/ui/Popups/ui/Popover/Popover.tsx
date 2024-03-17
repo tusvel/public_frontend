@@ -22,7 +22,7 @@ const Popover = (props: PopoverProps) => {
     <PopoverComponent
       className={classNames(cls.popover, {}, [className, popupCls.popup])}
     >
-      <PopoverComponent.Button className={popupCls.trigger}>
+      <PopoverComponent.Button as={'div'} className={popupCls.trigger}>
         {trigger}
       </PopoverComponent.Button>
 
