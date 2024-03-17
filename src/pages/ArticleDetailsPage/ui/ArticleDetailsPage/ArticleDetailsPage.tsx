@@ -12,6 +12,7 @@ import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDet
 import { VStack } from '@/shared/ui/Stack';
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
+import { ArticleRating } from '@/features/articleRating';
 
 type ArticleDetailsPageProps = {
   className?: string;
@@ -26,7 +27,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
   const { className } = props;
   const { id } = useParams<{ id: string }>();
 
-  if (!id && __PROJECT__ !== 'storybook') {
+  if (!id) {
     return <div className={className}>{t('Статья не найдена')}</div>;
   }
 
@@ -36,6 +37,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
         <VStack max gap={'16'}>
           <ArticleDetailsPageHeader />
           <ArticleDetails id={id} />
+          <ArticleRating articleId={id} />
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={id} />
         </VStack>
