@@ -43,7 +43,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
 
   config.resolve!.alias = {
     ...config.resolve!.alias,
-    entities: path.resolve(__dirname, '..', '..', 'src', 'entities'),
+    '@': paths.src,
   };
 
   // Resolvers
