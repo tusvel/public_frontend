@@ -1,10 +1,8 @@
 import { type FC, type PropsWithChildren, useMemo } from 'react';
 import { useSelector } from 'react-redux';
-import { getUserAuthData } from '@/entities/User/model/selectors/getUserAuthData/getUserAuthData';
+import { getUserAuthData, getUserRole, type UserRole } from '@/entities/User';
 import { Navigate, useLocation } from 'react-router-dom';
 import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
-import { type UserRole } from '@/entities/User';
-import { getUserRole } from '@/entities/User/model/selectors/getUserRole';
 
 type RequireAuthProps = {
   roles?: UserRole[];

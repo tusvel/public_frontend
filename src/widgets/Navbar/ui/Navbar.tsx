@@ -12,7 +12,7 @@ import { AppLink } from '@/shared/ui/AppLink/AppLink';
 import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { AppLinkTheme } from '@/shared/ui/AppLink/AppLink.interface';
 import { HStack } from '@/shared/ui/Stack';
-import { NotificationButton } from '@/features/notificationButton/NotificationButton';
+import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 
 type NavbarProps = {

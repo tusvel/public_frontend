@@ -2,6 +2,7 @@ import { memo, useCallback } from 'react';
 import {
   type ArticleSortField,
   ArticleSortSelector,
+  type ArticleType,
   ArticleTypeTabs,
   type ArticleView,
   ArticleViewSelector,
@@ -24,8 +25,6 @@ import { Input } from '@/shared/ui/Input/Input';
 import { type SortOrder } from '@/shared/types/sort';
 import { fetchArticles } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
-
-import { type ArticleType } from '@/entities/Article/model/consts/articleConsts';
 
 type ArticlesPageProps = {
   className?: string;

@@ -10,7 +10,7 @@ import {
 import { type AxiosInstance } from 'axios';
 import { type ArticleDetailsSchema } from '@/entities/Article';
 import { type ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
-import { type AddCommentFormSchema } from '@/features/addCommentForm/model/types/AddCommentFormSchema';
+import { type AddCommentFormSchema } from '@/features/addCommentForm';
 import { type ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { type ScrollSaveSchema } from '@/widgets/ScrollSave';
 import { type rtkApi } from '@/shared/api/rtkApi';

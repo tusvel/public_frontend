@@ -4,12 +4,16 @@ import {
   type PayloadAction,
 } from '@reduxjs/toolkit';
 import { type StateSchema } from '@/app/providers/StoreProvider/config/StateSchema';
-import { type Article, ArticleSortField, ArticleView } from '@/entities/Article';
+import {
+  type Article,
+  ArticleSortField,
+  ArticleType,
+  ArticleView,
+} from '@/entities/Article';
 import { type ArticlesPageSchema } from '../types/articlesPageSchema';
 import { fetchArticles } from '../services/fetchArticlesList/fetchArticlesList';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { type SortOrder } from '@/shared/types/sort';
-import { ArticleType } from '@/entities/Article/model/consts/articleConsts';
 
 const articlesAdapter = createEntityAdapter<Article>({
   selectId: (article) => article.id,

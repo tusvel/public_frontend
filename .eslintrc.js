@@ -65,6 +65,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'tusvel/path-checker': ['error', { alias: '@' }],
+    'tusvel/public-api-import': ['error', { alias: '@' }],
   },
   globals: {
     __IS_DEV__: true,

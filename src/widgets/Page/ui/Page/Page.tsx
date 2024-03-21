@@ -9,11 +9,10 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Page.module.scss';
 import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { scrollSaveActions } from '@/widgets/ScrollSave';
+import { getScrollSaveByPath, scrollSaveActions } from '@/widgets/ScrollSave';
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { getScrollSaveByPath } from '@/widgets/ScrollSave/model/selectors/getScrollSave';
-import { type StateSchema } from '@/app/providers/StoreProvider/config/StateSchema';
+import { type StateSchema } from '@/app/providers/StoreProvider';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';
 
