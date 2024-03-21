@@ -64,7 +64,7 @@ module.exports = {
     'new-cap': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
-    'tusvel/path-checker': 'error',
+    'tusvel/path-checker': ['error', { alias: '@' }],
   },
   globals: {
     __IS_DEV__: true,
