@@ -1,5 +1,4 @@
 import { memo, useCallback } from 'react';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/shared/ui/Button/Button';
 import { ButtonTheme } from '@/shared/ui/Button/Button.interface';
@@ -8,6 +7,7 @@ import { useSelector } from 'react-redux';
 import { getCanEditArticle } from '../../model/selectors/article';
 import { getArticleDetailsData } from '@/entities/Article';
 import { HStack } from '@/shared/ui/Stack';
+import { RoutePath } from '@/shared/const/router';
 
 type ArticleDetailsPageHeaderProps = {
   className?: string;

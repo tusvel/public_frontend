@@ -1,6 +1,5 @@
 import React, { memo, useCallback } from 'react';
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { DropDown } from '@/shared/ui/Popups';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -10,6 +9,7 @@ import {
   userActions,
 } from '@/entities/User';
 import { useTranslation } from 'react-i18next';
+import { RoutePath } from '@/shared/const/router';
 
 type avatarDropdownProps = {
   className?: string;
