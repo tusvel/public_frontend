@@ -1,3 +1,3 @@
-import { type StateSchema } from '@/app/providers/StoreProvider/config/StateSchema';
+import { type StateSchema } from '@/app/providers/StoreProvider';
 
 export const getUserInited = (state: StateSchema) => state.user._init;

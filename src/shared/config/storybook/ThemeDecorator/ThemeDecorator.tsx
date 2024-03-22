@@ -1,5 +1,7 @@
 import { type ComponentType } from 'react';
-import { type Theme, ThemeProvider } from '@/app/providers/ThemeProvider';
+// eslint-disable-next-line tusvel/layer-imports
+import { ThemeProvider } from '@/app/providers/ThemeProvider';
+import { type Theme } from '@/shared/const/theme';
 
 export const ThemeDecorator =
   (theme: Theme) => (StoryComponent: ComponentType) => (

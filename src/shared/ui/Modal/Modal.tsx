@@ -5,7 +5,7 @@ import { type ModalProps } from './Modal.interface';
 import { Portal } from '../Portal/Portal';
 import { Overlay } from '../Overlay/Overlay';
 import { useModal } from '@/shared/lib/hooks/useModal/useModal';
-import { useTheme } from '@/app/providers/ThemeProvider';
+import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 
 export const Modal: FC<ModalProps & PropsWithChildren> = (props) => {
   const { className, children, isOpen, onClose, lazy } = props;

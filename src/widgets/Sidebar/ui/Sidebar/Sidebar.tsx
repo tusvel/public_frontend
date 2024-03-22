@@ -3,7 +3,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Sidebar.module.scss';
 import { Button } from '@/shared/ui/Button/Button';
 import { ThemeSwitcher } from '@/features/themeSwitcher';
-import { LangSwitcher } from '@/widgets/LangSwitcher';
+import { LangSwitcher } from '@/features/LangSwitcher';
 import { ButtonTheme } from '@/shared/ui/Button/Button.interface';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { VStack } from '@/shared/ui/Stack/VStack/VStack';

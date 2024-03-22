@@ -8,7 +8,7 @@ import { type StateSchema, type ThunkExtraArg } from '../config/StateSchema';
 import { userReducer } from '@/entities/User';
 import { createReducerManager } from './reducerManager';
 import { $api } from '@/shared/api/api';
-import { scrollSaveReducer } from '@/widgets/ScrollSave';
+import { scrollSaveReducer } from '@/features/ScrollSave';
 import { rtkApi } from '@/shared/api/rtkApi';
 
 export function createReduxStore(

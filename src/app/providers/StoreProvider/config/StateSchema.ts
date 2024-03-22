@@ -12,7 +12,7 @@ import { type ArticleDetailsSchema } from '@/entities/Article';
 import { type ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
 import { type AddCommentFormSchema } from '@/features/addCommentForm';
 import { type ArticlesPageSchema } from '@/pages/ArticlesPage';
-import { type ScrollSaveSchema } from '@/widgets/ScrollSave';
+import { type ScrollSaveSchema } from 'src/features/ScrollSave';
 import { type rtkApi } from '@/shared/api/rtkApi';
 import { type ProfileSchema } from '@/features/editableProfileCard';
 

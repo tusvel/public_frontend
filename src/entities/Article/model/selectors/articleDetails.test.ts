@@ -1,3 +1,4 @@
+// eslint-disable-next-line tusvel/layer-imports
 import { type StateSchema } from '@/app/providers/StoreProvider/config/StateSchema';
 import {
   getArticleDetailsData,
