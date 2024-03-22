@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Modal } from '@/shared/ui/Modal/Modal';
+import { Modal } from '@/shared/ui/Modal';
 import { LoginFormAsync } from '../LoginForm/LoginForm.async';
 
 type LoginModalProps = {

@@ -1,5 +1,5 @@
 import React, { memo, useCallback } from 'react';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { Avatar } from '@/shared/ui/Avatar';
 import { DropDown } from '@/shared/ui/Popups';
 import { useDispatch, useSelector } from 'react-redux';
 import {

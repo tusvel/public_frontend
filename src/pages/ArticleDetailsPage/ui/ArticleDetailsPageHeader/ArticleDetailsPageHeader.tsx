@@ -1,7 +1,7 @@
 import { memo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button } from '@/shared/ui/Button/Button';
-import { ButtonTheme } from '@/shared/ui/Button/Button.interface';
+import { Button } from '@/shared/ui/Button';
+import { ButtonTheme } from '@/shared/ui/Button';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { getCanEditArticle } from '../../model/selectors/article';

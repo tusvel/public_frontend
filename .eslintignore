@@ -1,2 +1,3 @@
-/scripts/updateImports.ts
+/scripts/refactoring/updateImports.ts
+/scripts/refactoring/createPublicApiForShared.ts
 /vite.config.ts

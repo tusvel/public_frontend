@@ -1,8 +1,8 @@
 import { memo, useCallback } from 'react';
 import { HStack } from '@/shared/ui/Stack';
-import { Text } from '@/shared/ui/Text/Text';
-import { Button } from '@/shared/ui/Button/Button';
-import { ButtonTheme } from '@/shared/ui/Button/Button.interface';
+import { Text } from '@/shared/ui/Text';
+import { Button } from '@/shared/ui/Button';
+import { ButtonTheme } from '@/shared/ui/Button';
 import { useTranslation } from 'react-i18next';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
