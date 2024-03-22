@@ -51,7 +51,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'i18next', 'react-hooks', 'tusvel'],
+  plugins: ['react', 'i18next', 'react-hooks', 'tusvel', 'unused-imports'],
   settings: {
     react: {
       version: '18.2.0',
@@ -79,6 +79,7 @@ module.exports = {
         ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
       },
     ],
+    'unused-imports/no-unused-imports': 'error',
   },
   globals: {
     __IS_DEV__: true,
