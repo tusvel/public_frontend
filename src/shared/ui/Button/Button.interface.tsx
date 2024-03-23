@@ -11,9 +11,21 @@ export enum ButtonTheme {
 
 export type ButtonProps = {
   className?: string;
+  /**
+   * Тема кнопки. Отвечает за визуал (в рамке, без стилей, противоположный теме приложения цвет и тд)
+   */
   theme?: ButtonTheme;
-  size?: ButtonSize;
+  /**
+   * Флаг, делающий кнопку квадратной
+   */
   square?: boolean;
+  /**
+   * Размер кнопки в соответствии с дизайн системой
+   */
+  size?: ButtonSize;
+  /**
+   * Флаг, отвечающий за работу кнопки
+   */
   disabled?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
