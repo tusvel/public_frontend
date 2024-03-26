@@ -9,7 +9,7 @@ import {
   userActions,
 } from '@/entities/User';
 import { useTranslation } from 'react-i18next';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
 
 type avatarDropdownProps = {
   className?: string;
@@ -37,11 +37,11 @@ export const AvatarDropdown = memo((props: avatarDropdownProps) => {
       trigger={<Avatar size={30} src={authData.avatar} />}
       items={[
         ...(isAdminPanelAvailable
-          ? [{ content: t('Админка'), href: RoutePath.admin_panel }]
+          ? [{ content: t('Админка'), href: getRouteAdminPanel() }]
           : []),
         {
           content: t('Профиль'),
-          href: RoutePath.profile + authData.id,
+          href: getRouteProfile(authData.id),
         },
         { content: t('Выйти'), onClick: onLogout },
       ]}

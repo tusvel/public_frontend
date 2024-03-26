@@ -15,7 +15,7 @@ import {
   ArticleBlockType,
   ArticleView,
 } from '../../model/consts/articleConsts';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleDetails } from '@/shared/const/router';
 
 type ArticleListItemProps = {
   className?: string;
@@ -61,10 +61,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             />
           )}
           <div className={cls.footer}>
-            <AppLink
-              target={target}
-              to={RoutePath.article_details + article.id}
-            >
+            <AppLink target={target} to={getRouteArticleDetails(article.id)}>
               <Button>{t('Читать далее')}</Button>
             </AppLink>
             {views}
@@ -78,7 +75,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     <div
       className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
     >
-      <AppLink target={target} to={RoutePath.article_details + article.id}>
+      <AppLink target={target} to={getRouteArticleDetails(article.id)}>
         <Card className={cls.card}>
           <div className={cls.imageWrapper}>
             <img src={article.img} alt={article.title} className={cls.img} />
