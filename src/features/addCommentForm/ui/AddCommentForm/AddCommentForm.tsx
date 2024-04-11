@@ -6,8 +6,8 @@ import {
   type ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
-  addCommentFormActions,
   addCommentFormReducer,
+  useCommentFormActions,
 } from '../../model/slice/addCommentFormSlice';
 import { useSelector } from 'react-redux';
 import {
@@ -16,7 +16,6 @@ import {
 } from '../../model/selectors/addCommentFormSelectors';
 import { Input } from '@/shared/ui/Input';
 import { useTranslation } from 'react-i18next';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button } from '@/shared/ui/Button';
 import { HStack } from '@/shared/ui/Stack';
 
@@ -34,13 +33,13 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
   const { t } = useTranslation();
   const text = useSelector(getAddCommentFormText);
   const error = useSelector(getAddCommentFormError);
-  const dispatch = useAppDispatch();
+  const { setText } = useCommentFormActions();
 
   const onCommentTextChange = useCallback(
     (value: string) => {
-      dispatch(addCommentFormActions.setText(value));
+      setText(value);
     },
-    [dispatch],
+    [setText],
   );
 
   const onSendHandler = useCallback(() => {

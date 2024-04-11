@@ -8,11 +8,10 @@ import {
 import { ArticleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { fetchArticleById } from '../../model/services/fetchArticleById';
-import { useSelector } from 'react-redux';
 import {
-  getArticleDetailsData,
-  getArticleDetailsError,
-  getArticleDetailsIsLoading,
+  useArticleDetailsData,
+  useArticleDetailsError,
+  useArticleDetailsIsLoading,
 } from '../../model/selectors/articleDetails';
 import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
 import { useTranslation } from 'react-i18next';
@@ -40,9 +39,9 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   const { t } = useTranslation('article-details');
   const { className, id } = props;
   const dispatch = useAppDispatch();
-  const article = useSelector(getArticleDetailsData);
-  const isLoading = useSelector(getArticleDetailsIsLoading);
-  const error = useSelector(getArticleDetailsError);
+  const article = useArticleDetailsData();
+  const isLoading = useArticleDetailsIsLoading();
+  const error = useArticleDetailsError();
 
   useEffect(() => {
     if (__PROJECT__ !== 'storybook' && id) {

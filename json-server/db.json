@@ -629,6 +629,12 @@
       "userId": "1",
       "text": "12",
       "id": "K6Sm86Y"
+    },
+    {
+      "articleId": "5",
+      "userId": "1",
+      "text": "hello my friend",
+      "id": "9h47YM4"
     }
   ],
   "users": [
@@ -739,6 +745,19 @@
       "rate": 4,
       "feedback": "kaef",
       "id": "PVrcjVi"
+    },
+    {
+      "articleId": "14",
+      "userId": "1",
+      "rate": 5,
+      "id": "VgcTGXZ"
+    },
+    {
+      "articleId": "5",
+      "userId": "1",
+      "rate": 3,
+      "feedback": "hello my friend",
+      "id": "4CXHcLN"
     }
   ],
   "profile-ratings": [
