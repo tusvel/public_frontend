@@ -1,11 +1,8 @@
 import { memo, useCallback } from 'react';
 import {
   type ArticleSortField,
-  ArticleSortSelector,
   type ArticleType,
-  ArticleTypeTabs,
   type ArticleView,
-  ArticleViewSelector,
 } from '@/entities/Article';
 import { articlesPagesActions } from '../../model/slices/articlesPageSlice';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -25,6 +22,9 @@ import { Input } from '@/shared/ui/Input';
 import { type SortOrder } from '@/shared/types/sort';
 import { fetchArticles } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
+import { ArticleSortSelector } from '@/features/ArticleSortSelector';
+import { ArticleViewSelector } from '@/features/ArticleViewSelector';
+import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
 
 type ArticlesPageProps = {
   className?: string;
