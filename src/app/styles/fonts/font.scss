@@ -1,10 +1,9 @@
 @font-face {
   font-family: consolas;
   font-display: swap;
-  src: url('../../../shared/assets/fonts/Consolas/Consolas.eot');
+  src: url('../../../shared/assets/fonts/Consolas/Consolas.ttf');
   src:
     local('O'),
-    url('../../../shared/assets/fonts/Consolas/Consolas.woff') format('woff'),
     url('../../../shared/assets/fonts/Consolas/Consolas.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -13,11 +12,9 @@
 @font-face {
   font-family: consolas;
   font-display: swap;
-  src: url('../../../shared/assets/fonts/Consolas-bold/Consolas-bold.eot');
+  src: url('../../../shared/assets/fonts/Consolas-bold/Consolas-bold.ttf');
   src:
     local('O'),
-    url('../../../shared/assets/fonts/Consolas-bold/Consolas-bold.woff')
-      format('woff'),
     url('../../../shared/assets/fonts/Consolas-bold/Consolas-bold.ttf')
       format('truetype');
   font-weight: 700;
