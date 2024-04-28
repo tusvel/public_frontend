@@ -15,11 +15,12 @@ import { useSelector } from 'react-redux';
 import { type StateSchema } from '@/app/providers/StoreProvider';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';
+import { type TestProps } from '@/shared/types/tests';
 
 type PageProps = {
   className?: string;
   onScrollEnd?: () => void;
-};
+} & TestProps;
 
 export const PAGE_ID = 'PAGE_ID';
 
@@ -58,6 +59,7 @@ export const Page: FC<PropsWithChildren & PageProps> = (props) => {
       className={classNames(cls.Page, {}, [className])}
       onScroll={onScroll}
       id={PAGE_ID}
+      data-testid={props['data-testid'] ?? 'Page'}
     >
       {children}
       {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}

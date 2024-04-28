@@ -1,6 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { Page } from '@/widgets/Page';
 
-// eslint-disable-next-line i18next/no-literal-string
-const AdminPanelPage = () => <div>Admin Panel</div>;
+const AdminPanelPage = () => {
+  const { t } = useTranslation();
+
+  return <Page data-testid={'AdminPanelPage'}>{t('Админ панель')}</Page>;
+};
 
 export default AdminPanelPage;

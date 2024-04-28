@@ -1,10 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Page } from '@/widgets/Page';
 
 const MainPage = () => {
   const { t } = useTranslation();
 
-  return <div>{t('Главная страница')}</div>;
+  return <Page data-testid={'MainPage'}>{t('Главная страница')}</Page>;
 };
 
 export default MainPage;

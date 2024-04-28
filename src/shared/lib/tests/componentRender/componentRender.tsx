@@ -19,7 +19,7 @@ export const componentRender = (
   const { route = '/', initialState, asyncReducers } = options;
 
   return render(
-    <MemoryRouter basename={route}>
+    <MemoryRouter initialEntries={[route]}>
       <StoreProvider initialState={initialState} asyncReducers={asyncReducers}>
         <I18nextProvider i18n={i18nForTest}>{component}</I18nextProvider>
       </StoreProvider>

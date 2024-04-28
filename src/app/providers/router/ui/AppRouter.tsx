@@ -7,7 +7,9 @@ import { type AppRoutesProps } from '@/shared/types/router';
 
 export const AppRouter = memo(() => {
   const renderWithWrapper = useCallback((route: AppRoutesProps) => {
-    const { element, roles } = route;
+    const element = (
+      <Suspense fallback={<PageLoader />}>{route.element}</Suspense>
+    );
 
     return (
       <Route
@@ -15,7 +17,7 @@ export const AppRouter = memo(() => {
         path={route.path}
         element={
           route.authOnly ? (
-            <RequireAuth roles={roles}>{element}</RequireAuth>
+            <RequireAuth roles={route.roles}>{element}</RequireAuth>
           ) : (
             element
           )
@@ -24,9 +26,5 @@ export const AppRouter = memo(() => {
     );
   }, []);
 
-  return (
-    <Suspense fallback={<PageLoader />}>
-      <Routes>{Object.values(routeConfig).map(renderWithWrapper)}</Routes>
-    </Suspense>
-  );
+  return <Routes>{Object.values(routeConfig).map(renderWithWrapper)}</Routes>;
 });
