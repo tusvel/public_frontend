@@ -1,3 +1,5 @@
 /scripts/refactoring/updateImports.ts
 /scripts/refactoring/createPublicApiForShared.ts
 /vite.config.ts
+/cypress.config.ts
+/cypress
