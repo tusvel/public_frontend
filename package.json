@@ -86,6 +86,7 @@
     "jest-environment-jsdom": "^29.6.1",
     "jest-html-reporters": "^3.1.7",
     "json-server": "^0.17.3",
+    "lint-staged": "^15.2.2",
     "mini-css-extract-plugin": "^2.7.6",
     "prettier": "3.0.0",
     "reg-cli": "^0.17.7",
