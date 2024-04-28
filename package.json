@@ -16,9 +16,9 @@
     "lint:scss": "npx stylelint '**/*.scss'",
     "lint:scss:fix": "npx stylelint '**/*.scss' --fix",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
-    "test:ui": "loki test",
-    "test:ui:ok": "loki approve",
-    "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
+    "test:ui": "npx loki test",
+    "test:ui:ok": "npx loki approve",
+    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
     "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
     "test:ui:json": "node scripts/generate-visual-json-report.js",
     "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
@@ -87,6 +87,7 @@
     "jest-html-reporters": "^3.1.7",
     "json-server": "^0.17.3",
     "lint-staged": "^15.2.2",
+    "loki": "^0.35.0",
     "mini-css-extract-plugin": "^2.7.6",
     "prettier": "3.0.0",
     "reg-cli": "^0.17.7",
@@ -140,14 +141,6 @@
         "target": "chrome.docker",
         "preset": "iPhone 7"
       }
-    }
-  },
-  "overrides": {
-    "loki": {
-      "@storybook/react": "$@storybook/react"
-    },
-    "react-reconciler": {
-      "react": "^18.2.0"
     }
   }
 }

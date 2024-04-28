@@ -5,6 +5,8 @@ const project = new Project({});
 project.addDirectoryAtPath('node_modules/.cache');
 const cacheDirectory = project.getDirectory('node_modules/.cache');
 
-cacheDirectory?.delete();
+if (cacheDirectory) {
+  cacheDirectory?.delete();
+}
 
-void project.save();
+project.save().then(() => {});
